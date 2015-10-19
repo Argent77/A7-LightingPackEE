@@ -77,6 +77,9 @@ fpYUVGRY.GLSL Used for grayscaled video output (currently only used in BG2:EE).
 6. Version History
 ~~~~~~~~~~~~~~~~~~
 
+v2.3 (2015-04-??)
+- Added check to prevent modifying files more than once
+
 v2.2 (2014-12-11)
 - Added support for latest BG2:EE update
 
