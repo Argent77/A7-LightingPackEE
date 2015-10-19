@@ -1,0 +1,252 @@
+BACKUP ~LightingPack/backup~
+AUTHOR ~Argent77 at Spellhold Studios Forum~
+VERSION ~v2.2~
+
+README ~LightingPack/readme/readme.%LANGUAGE%.txt~ ~LightingPack/readme/readme.txt~
+
+LANGUAGE  ~English~ ~english~ ~LightingPack/languages/english/setup.tra~
+LANGUAGE  ~Polski (tlumaczenie: Cahir)~ ~polish~ ~LightingPack/languages/english/setup.tra~ ~LightingPack/languages/polish/setup.tra~
+
+// Neutral settings
+BEGIN @100    // Neutral settings for contrast, brightness and gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.0" END
+
+// slight overall increase
+BEGIN @101    // Slightly increased contrast, brightness and gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.1" brightness = "0.05" gamma = "1.05" END
+
+// moderate overall increase
+BEGIN @102    // Moderately increased contrast, brightness and gamma (recommended)
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.2" brightness = "0.1" gamma = "1.1" END
+
+// great overall increase
+BEGIN @103    // Greatly increased contrast, brightness and gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.4" brightness = "0.2" gamma = "1.2" END
+
+// slight overall decrease
+BEGIN @104    // Slightly reduced contrast, brightness and gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "0.9" brightness = "-0.05" gamma = "1.0" END
+
+// moderate overall decrease
+BEGIN @105    // Moderately reduced contrast, brightness and gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "0.8" brightness = "-0.1" gamma = "0.9" END
+
+// slight contrast increase
+BEGIN @106    // Slightly increased contrast
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.05" brightness = "0.0" gamma = "1.0" END
+
+// moderate contrast increase
+BEGIN @107    // Moderately increased contrast
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.1" brightness = "0.0" gamma = "1.0" END
+
+// great contrast increase
+BEGIN @108    // Greatly increased contrast
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.2" brightness = "0.0" gamma = "1.0" END
+
+// slight contrast decrease
+BEGIN @109    // Slightly reduced contrast
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "0.9" brightness = "0.0" gamma = "1.0" END
+
+// moderate contrast decrease
+BEGIN @110    // Moderately reduced contrast
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "0.8" brightness = "0.0" gamma = "1.0" END
+
+// slight brightness increase
+BEGIN @111    // Slightly increased brightness
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.05" gamma = "1.0" END
+
+// moderate brightness increase
+BEGIN @112    // Moderately increased brightness
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.1" gamma = "1.0" END
+
+// great brightness increase
+BEGIN @113    // Greatly increased brightness
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.2" gamma = "1.0" END
+
+// slight brightness decrease
+BEGIN @114    // Slightly reduced brightness
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "-0.05" gamma = "1.0" END
+
+// moderate brightness decrease
+BEGIN @115    // Moderately reduced brightness
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "-0.1" gamma = "1.0" END
+
+// slight gamma increase
+BEGIN @116    // Slightly increased gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.1" END
+
+// moderate gamma increase
+BEGIN @117    // Moderately increased gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.2" END
+
+// great gamma increase
+BEGIN @118    // Greatly increased gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.4" END
+
+// slight gamma decrease
+BEGIN @119    // Slightly reduced gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.9" END
+
+// moderate gamma decrease
+BEGIN @120    // Moderately reduced gamma
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.8" END
+
+// manual input
+BEGIN @121    // Enter values for contrast, brightness and gamma manually
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
+  SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
+
+  OUTER_TEXT_SPRINT confirm "n"
+  OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
+    // input contrast
+    PRINT @200  // Enter a value for contrast (a real number >= 0.0, neutral=1.0):
+    ACTION_READLN contrast
+    OUTER_WHILE (~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) BEGIN
+      PRINT @200  // Enter a value for contrast (a real number >= 0.0, neutral=1.0):
+      ACTION_READLN contrast
+    END
+
+    // input brightness
+    PRINT @201  // Enter a value for brightness (a real number in interval [-1.0, 1.0], neutral=0.0):
+    ACTION_READLN brightness
+    OUTER_WHILE (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) BEGIN
+      PRINT @201  // Enter a value for brightness (a real number in interval [-1.0, 1.0], neutral=0.0):
+      ACTION_READLN brightness
+    END
+
+    // input gamma
+    PRINT @202  // Enter a value for gamma (a real number > 0.0, neutral=1.0):
+    ACTION_READLN gamma
+    OUTER_WHILE (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) || NOT (~%gamma%~ STRING_MATCHES_REGEXP ~-?0\(\.0+\)?$~) BEGIN
+      PRINT @202  // Enter a value for gamma (a real number > 0.0, neutral=1.0):
+      ACTION_READLN gamma
+    END
+
+    // print summary
+    PRINT @203    // The following values have been entered:
+    PRINT @204    // Contrast   =
+    PRINT @205    // Brightness =
+    PRINT @206    // Gamma      =
+
+    PRINT @207    // Are the values correct [y/n/c]?
+    ACTION_READLN confirm
+    OUTER_WHILE NOT ((~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) ||
+                     (~%confirm%~ STRING_EQUAL_CASE ~y~) || (~%confirm%~ STRING_EQUAL_CASE ~yes~) ||
+                     (~%confirm%~ STRING_EQUAL_CASE ~c~) || (~%confirm%~ STRING_EQUAL_CASE ~cancel~)) BEGIN
+      PRINT @208    // Are the values correct? (Enter y for yes, n for no or c for cancel):
+      ACTION_READLN confirm
+    END
+    ACTION_IF (~%confirm%~ STRING_EQUAL_CASE ~c~) || (~%confirm%~ STRING_EQUAL_CASE ~cancel~) BEGIN
+      FAIL @300   // User has cancelled installation.
+    END
+  END
+
+  INCLUDE ~LightingPack/lib/functions.tph~
+  LAF InstallLighting STR_VAR contrast = EVALUATE_BUFFER ~%contrast%~ brightness = EVALUATE_BUFFER ~%brightness%~ gamma = EVALUATE_BUFFER ~%gamma%~ END
+

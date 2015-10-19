@@ -1,0 +1,72 @@
+// WeiDU functions
+
+// Extends existing files
+DEFINE_ACTION_FUNCTION InstallLighting
+STR_VAR
+  contrast    = "1.0"
+  brightness  = "0.0"
+  gamma       = "1.0"
+BEGIN
+  // arguments must be valid numbers
+  ACTION_IF NOT ((~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) ||
+                 (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) ||
+                 (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~)) BEGIN
+// shader scripts will be prepended by the following text
+<<<<<<<< LightingPack/inlined/functions.glsl
+// Use the same values in all affected GLSL files for best results.
+const lowp float a7contrast   = %contrast%;    // modify to adjust contrast (default: 1.0, lower: <1.0, higher: >1.0)
+const lowp float a7brightness = %brightness%;    // modify to adjust brightness (default: 0.0, darker: <0.0, brighter: >0.0)
+const lowp float a7gamma      = %gamma%;    // modify to adjust gamma correction (default: 1.0, darker: <1.0, brighter: >1.0)
+
+vec3 a7ContrastFilter( vec3 color )
+{
+  if (a7contrast != 1.0)
+    color = ( ( color - 0.5 ) * max( a7contrast, 0.0 ) ) + 0.5;
+  return color;
+}
+
+vec3 a7BrightnessFilter( vec3 color )
+{
+  if (a7brightness != 0.0)
+    color += a7brightness;
+  return color;
+}
+
+vec3 a7GammaFilter( vec3 color )
+{
+  if (a7gamma != 1.0)
+    color = pow( color, vec3( 1.0 / a7gamma ) );
+  return color;
+}
+
+vec4 a7ApplyFilters( vec4 color )
+{
+  // applying contrast
+  color.rgb = a7ContrastFilter(color.rgb);
+
+  // applying brightness
+  color.rgb = a7BrightnessFilter(color.rgb);
+
+  // applying gamma
+  color.rgb = a7GammaFilter(color.rgb);
+
+  // finalizing pixel data
+  return vec4( color.rgb, color.a );
+}
+
+
+>>>>>>>>
+
+    // Adjusting shader return values only, for max. mod compatibility
+    ACTION_FOR_EACH file IN ~fpDraw.GLSL~ ~fpTone.GLSL~ ~fpYUV.GLSL~ ~fpYUVGRY.GLSL~ BEGIN
+      ACTION_IF (FILE_EXISTS_IN_GAME ~%file%~) BEGIN
+        COPY_EXISTING ~%file%~ ~override~
+          INSERT_FILE 0 ~LightingPack/inlined/functions.glsl~
+          REPLACE_TEXTUALLY EVALUATE_REGEXP 
+          ~gl_FragColor\(.+\)~ 
+          ~vec4 a7FragColor\1%LNL%	gl_FragColor = a7ApplyFilters( a7FragColor );~
+          EVALUATE_BUFFER
+      END
+    END
+  END
+END

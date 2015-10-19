@@ -1,0 +1,43 @@
+@1 = ~Pliki skryptowe shaderow dla kontroli oswietlenia~
+@2 = ~Mod ten wymaga zainstalowania BG:EE lub BG2:EE.~
+@3 = ~Do dzialania tego moda niezbedne jest zainstalowanie BG:EE w wersji 1.2 lub wyzszej.~
+
+@100 = ~Neutralne ustawienia poziomu kontrastu, jasnosci i korekcji gamma~
+
+@101 = ~Nieznacznie zwiekszone poziomy kontrastu, jasnosci i korekcji gamma~
+@102 = ~Srednio zwiekszone poziomy kontrasu, jasnosci i korekcji gamma (zalecane)~
+@103 = ~Znacznie zwiekszone poziomy kontrastu, jasnosci i korekcji gamma~
+@104 = ~Nieznacznie zmniejszone poziomy kontrastu, jasnosci i korekcji gamma~
+@105 = ~Srednio zmniejszone poziomy kontrastu, jasnosci i korekcji gamma~
+
+@106 = ~Nieznacznie zwiekszony poziom kontrastu~
+@107 = ~Srednio zwiekszony poziom kontrastu~
+@108 = ~Znacznie zwiekszony poziom kontrastu~
+@109 = ~Nieznacznie zmniejszony poziom kontrastu~
+@110 = ~Srednio zmniejszony poziom kontrastu~
+
+@111 = ~Nieznacznie zwiekszony poziom jasnosci~
+@112 = ~Srednio zwiekszony poziom jasnosci~
+@113 = ~Znacznie zwiekszony poziom jasnosci~
+@114 = ~Nieznacznie zmniejszony poziom jasnosci~
+@115 = ~Srednio zmniejszony poziom jasnosci~
+
+@116 = ~Nieznacznie zwiekszony poziom korekcji gamma~
+@117 = ~Srednio zwiekszony poziom korekcji gamma~
+@118 = ~Znacznie zwiekszony poziom korekcji gamma~
+@119 = ~Nieznacznie zmniejszony poziom korekcji gamma~
+@120 = ~Srednio zmniejszony poziom korekcji gamma~
+
+@121 = ~Wprowadz recznie wartosci oswietlenia~
+
+@200 = ~Wprowadz wartosc poziomu kontrastu (liczba >= 0.0, neutralna=1.0):~
+@201 = ~Wprowadz wartosc poziomu jasnosci (liczba z przedzialu [-1.0, 1.0], neutralna=0.0):~
+@202 = ~Wprowadz wartosc poziomu korekcji gamma (liczba > 0.0, neutralna=1.0):~
+@203 = ~Wprowadzono nastepujace wartosci:~
+@204 = ~Kontrast   = %contrast%~
+@205 = ~Jasnosc    = %brightness%~
+@206 = ~Gamma      = %gamma%~
+@207 = ~Czy podane wartosci sa prawidlowe [y/n/c]?~
+@208 = ~Czy podane wartosci sa prawidlowe? (Wcisnij y dla tak, n dla nie, lub c aby przerwac):~
+
+@300 = ~Instalacja przerwana przez uzytkownika.~

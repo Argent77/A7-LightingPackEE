@@ -1,0 +1,43 @@
+@1 = ~Shader script files for lighting control~
+@2 = ~This mod requires BG:EE or BG2:EE to be installed.~
+@3 = ~You need BG:EE v1.2 or higher for this mod to work.~
+
+@100 = ~Neutral settings for contrast, brightness and gamma~
+
+@101 = ~Slightly increased contrast, brightness and gamma~
+@102 = ~Moderately increased contrast, brightness and gamma (recommended)~
+@103 = ~Greatly increased contrast, brightness and gamma~
+@104 = ~Slightly reduced contrast, brightness and gamma~
+@105 = ~Moderately reduced contrast, brightness and gamma~
+
+@106 = ~Slightly increased contrast~
+@107 = ~Moderately increased contrast~
+@108 = ~Greatly increased contrast~
+@109 = ~Slightly reduced contrast~
+@110 = ~Moderately reduced contrast~
+
+@111 = ~Slightly increased brightness~
+@112 = ~Moderately increased brightness~
+@113 = ~Greatly increased brightness~
+@114 = ~Slightly reduced brightness~
+@115 = ~Moderately reduced brightness~
+
+@116 = ~Slightly increased gamma~
+@117 = ~Moderately increased gamma~
+@118 = ~Greatly increased gamma~
+@119 = ~Slightly reduced gamma~
+@120 = ~Moderately reduced gamma~
+
+@121 = ~Enter lighting values manually~
+
+@200 = ~Enter a value for contrast (number >= 0.0, neutral=1.0):~
+@201 = ~Enter a value for brightness (number in interval [-1.0, 1.0], neutral=0.0):~
+@202 = ~Enter a value for gamma (number > 0.0, neutral=1.0):~
+@203 = ~The following values have been entered:~
+@204 = ~Contrast   = %contrast%~
+@205 = ~Brightness = %brightness%~
+@206 = ~Gamma      = %gamma%~
+@207 = ~Are the values correct [y/n/c]?~
+@208 = ~Are the values correct? (Enter y for yes, n for no or c for cancel):~
+
+@300 = ~Installation cancelled by user.~
