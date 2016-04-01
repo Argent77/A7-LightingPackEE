@@ -1,7 +1,7 @@
 Opcje dostosowywania Shader Pack: Lightning dla Edycji Rozszerzonych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wersja:       2.2
+Wersja:       2.3
 Autor:        argent77
 Pobierać z:   http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
 
@@ -67,7 +67,8 @@ fpSprite.GLSL Używane do obramowania sprite'ów.
 6. Version History
 ~~~~~~~~~~~~~~~~~~
 
-v2.3 (2015-04-??)
+v2.3 (2016-04-01)
+- Added support for Enhanced Edition patches v2.0
 - Added check to prevent modifying files more than once
 
 v2.2 (2014-12-11)

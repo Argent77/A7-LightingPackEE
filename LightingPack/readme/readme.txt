@@ -1,7 +1,7 @@
 Shader Pack: Lighting adjustments for the Enhanced Edition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:       2.2
+Version:       2.3
 Author:        argent77
 Download from: http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
 
@@ -86,7 +86,8 @@ fpSprite.GLSL Used for the sprite outlines.
 6. Version History
 ~~~~~~~~~~~~~~~~~~
 
-v2.3 (2015-04-??)
+v2.3 (2016-04-01)
+- Added support for Enhanced Edition patches v2.0
 - Added check to prevent modifying files more than once
 
 v2.2 (2014-12-11)
