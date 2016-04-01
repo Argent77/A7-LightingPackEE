@@ -57,16 +57,24 @@ vec4 a7ApplyFilters( vec4 color )
 
 >>>>>>>>
 
+    // EE engine 2.x contains additional shader files
+    ACTION_IF (FILE_EXISTS_IN_GAME ~fpsprite.glsl~) BEGIN
+      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fpfont.glsl~ ~fpselect.glsl~ ~fpsprite.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
+    END ELSE BEGIN
+      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
+    END
+
     // Adjusting shader return values only, for max. mod compatibility
-    ACTION_FOR_EACH file IN ~fpDraw.GLSL~ ~fpTone.GLSL~ ~fpYUV.GLSL~ ~fpYUVGRY.GLSL~ BEGIN
+    ACTION_PHP_EACH a7_shader_files AS index => file BEGIN
       ACTION_IF (FILE_EXISTS_IN_GAME ~%file%~) BEGIN
         ACTION_IF ((FILE_CONTAINS_EVALUATED(~%file%~ ~a7FragColor~)) == 0) BEGIN
           COPY_EXISTING ~%file%~ ~override~
             INSERT_FILE 0 ~LightingPack/inlined/functions.glsl~
             REPLACE_TEXTUALLY EVALUATE_REGEXP 
-            ~gl_FragColor\(.+\)~ 
-            ~vec4 a7FragColor\1%LNL%	gl_FragColor = a7ApplyFilters( a7FragColor );~
+            ~^\([ %TAB%]*\)gl_FragColor\(.+\)~ 
+            ~\1vec4 a7FragColor\2%LNL%\1gl_FragColor = a7ApplyFilters( a7FragColor );~
             EVALUATE_BUFFER
+          BUT_ONLY
         END ELSE BEGIN
           WARN ~File has already been extended: %file%. Skipping...~
         END

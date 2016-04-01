@@ -9,7 +9,7 @@ LANGUAGE  ~Polski (tlumaczenie: Cahir)~ ~polish~ ~LightingPack/languages/english
 
 // Neutral settings
 BEGIN @100    // Neutral settings for contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -18,7 +18,7 @@ BEGIN @100    // Neutral settings for contrast, brightness and gamma
 
 // slight overall increase
 BEGIN @101    // Slightly increased contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -27,7 +27,7 @@ BEGIN @101    // Slightly increased contrast, brightness and gamma
 
 // moderate overall increase
 BEGIN @102    // Moderately increased contrast, brightness and gamma (recommended)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -36,7 +36,7 @@ BEGIN @102    // Moderately increased contrast, brightness and gamma (recommende
 
 // great overall increase
 BEGIN @103    // Greatly increased contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -45,7 +45,7 @@ BEGIN @103    // Greatly increased contrast, brightness and gamma
 
 // slight overall decrease
 BEGIN @104    // Slightly reduced contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -54,7 +54,7 @@ BEGIN @104    // Slightly reduced contrast, brightness and gamma
 
 // moderate overall decrease
 BEGIN @105    // Moderately reduced contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -63,7 +63,7 @@ BEGIN @105    // Moderately reduced contrast, brightness and gamma
 
 // slight contrast increase
 BEGIN @106    // Slightly increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -72,7 +72,7 @@ BEGIN @106    // Slightly increased contrast
 
 // moderate contrast increase
 BEGIN @107    // Moderately increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -81,7 +81,7 @@ BEGIN @107    // Moderately increased contrast
 
 // great contrast increase
 BEGIN @108    // Greatly increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -90,7 +90,7 @@ BEGIN @108    // Greatly increased contrast
 
 // slight contrast decrease
 BEGIN @109    // Slightly reduced contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -99,7 +99,7 @@ BEGIN @109    // Slightly reduced contrast
 
 // moderate contrast decrease
 BEGIN @110    // Moderately reduced contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -108,7 +108,7 @@ BEGIN @110    // Moderately reduced contrast
 
 // slight brightness increase
 BEGIN @111    // Slightly increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -117,7 +117,7 @@ BEGIN @111    // Slightly increased brightness
 
 // moderate brightness increase
 BEGIN @112    // Moderately increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -126,7 +126,7 @@ BEGIN @112    // Moderately increased brightness
 
 // great brightness increase
 BEGIN @113    // Greatly increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -135,7 +135,7 @@ BEGIN @113    // Greatly increased brightness
 
 // slight brightness decrease
 BEGIN @114    // Slightly reduced brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -144,7 +144,7 @@ BEGIN @114    // Slightly reduced brightness
 
 // moderate brightness decrease
 BEGIN @115    // Moderately reduced brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -153,7 +153,7 @@ BEGIN @115    // Moderately reduced brightness
 
 // slight gamma increase
 BEGIN @116    // Slightly increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -162,7 +162,7 @@ BEGIN @116    // Slightly increased gamma
 
 // moderate gamma increase
 BEGIN @117    // Moderately increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -171,7 +171,7 @@ BEGIN @117    // Moderately increased gamma
 
 // great gamma increase
 BEGIN @118    // Greatly increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -180,7 +180,7 @@ BEGIN @118    // Greatly increased gamma
 
 // slight gamma decrease
 BEGIN @119    // Slightly reduced gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -189,7 +189,7 @@ BEGIN @119    // Slightly reduced gamma
 
 // moderate gamma decrease
 BEGIN @120    // Moderately reduced gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -198,7 +198,7 @@ BEGIN @120    // Moderately reduced gamma
 
 // manual input
 BEGIN @121    // Enter values for contrast, brightness and gamma manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires BG:EE or BG2:EE to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @2   // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @3    // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
 
@@ -248,5 +248,5 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
   END
 
   INCLUDE ~LightingPack/lib/functions.tph~
-  LAF InstallLighting STR_VAR contrast = EVALUATE_BUFFER ~%contrast%~ brightness = EVALUATE_BUFFER ~%brightness%~ gamma = EVALUATE_BUFFER ~%gamma%~ END
+  LAF InstallLighting STR_VAR contrast = EVAL ~%contrast%~ brightness = EVAL ~%brightness%~ gamma = EVAL ~%gamma%~ END
 

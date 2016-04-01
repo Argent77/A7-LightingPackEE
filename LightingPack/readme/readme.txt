@@ -20,6 +20,9 @@ If you want to get a general idea on how each setting looks compared to the orig
 preview folder of this mod and open the file "lighting_preview.jpg" with your graphics viewer 
 or browser.
 
+Note: Changes made by this mod will not be visible if you select "Alternative renderer" in the 
+      graphics options of the games.
+
 
 2. Installation
 ~~~~~~~~~~~~~~~
@@ -71,7 +74,13 @@ Usage of shader files in the game:
 fpDraw.GLSL   Used for every colored areas of the screen, except for videos.
 fpTone.GLSL   Used for grayscaled areas of the screen (e.g. disabled buttons or time stop effect).
 fpYUV.GLSL    Used for video output.
-fpYUVGRY.GLSL Used for grayscaled video output (currently only used in BG2:EE).
+fpYUVGRY.GLSL Used for grayscaled video output.
+
+Additional shader files since game engine v2.0:
+fpFont.GLSL   Used for game text.
+fpSelect.GLSL Used for sprite highlighting.
+fpSprite.GLSL Used for the sprite outlines.
+
 
 
 6. Version History

@@ -16,6 +16,8 @@ Możesz wybrać opcję z zestawu predefiniowanych konfiguracji oświetlenia lub 
 
 Jeśli chcesz mieć ogólny pogląd jak dane ustawienia mają się do tych oryginalnych, wejdź w folder preview tego moda i otwórz przy pomocy dowolnej przeglądarki graficznej lub internetowej plik o nazwie "lighting_preview.jpg".
 
+Uwaga: Zmiany dokonane przez tą modyfikację nie będą widoczne, jeśli w opcjach graficznych gry wybierzesz opcję "Alternatywny renderer". 
+
 
 2. Instalacja
 ~~~~~~~~~~~~~
@@ -54,7 +56,12 @@ Zastosowanie plików shaderów w grze:
 fpDraw.GLSL   Wykorzystywany we wszystkich kolorowych obszarach ekranu, z wyjątkiem filmów. 
 fpTone.GLSL   Wykorzystywany we wszystkich obszarach ekranu o różnym stopniu szarości (np. przy nieaktywnych przyciskach czy efekcie zatrzymania czasu). 
 fpYUV.GLSL    Wykorzystywany podczas odtwarzaniu filmów.
-fpYUVGRY.GLSL Wykorzystywane dla wyjścia wideo w trybie odcieni szarości (obecnie używane jedynie w BG2:EE).
+fpYUVGRY.GLSL Wykorzystywane dla wyjścia wideo w trybie odcieni szarości.
+
+Dodatkowe pliki shaderów dla wersji silnika v2.0:
+fpFont.GLSL   Używane do tekstów w grze.
+fpSelect.GLSL Używane do podświetlania sprite'ów.
+fpSprite.GLSL Używane do obramowania sprite'ów.
 
 
 6. Version History
