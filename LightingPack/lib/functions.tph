@@ -8,9 +8,9 @@ STR_VAR
   gamma       = "1.0"
 BEGIN
   // arguments must be valid numbers
-  ACTION_IF NOT ((~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) ||
-                 (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) ||
-                 (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~)) BEGIN
+  ACTION_IF NOT ((~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) ||
+                 (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) ||
+                 (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~)) BEGIN
 // shader scripts will be prepended by the following text
 <<<<<<<< LightingPack/inlined/functions.glsl
 // Use the same values in all affected GLSL files for best results.

@@ -207,7 +207,7 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
     // input contrast
     PRINT @200  // Enter a value for contrast (a real number >= 0.0, neutral=1.0):
     ACTION_READLN contrast
-    OUTER_WHILE (~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) BEGIN
+    OUTER_WHILE (~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) BEGIN
       PRINT @200  // Enter a value for contrast (a real number >= 0.0, neutral=1.0):
       ACTION_READLN contrast
     END
@@ -215,7 +215,7 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
     // input brightness
     PRINT @201  // Enter a value for brightness (a real number in interval [-1.0, 1.0], neutral=0.0):
     ACTION_READLN brightness
-    OUTER_WHILE (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) BEGIN
+    OUTER_WHILE (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) BEGIN
       PRINT @201  // Enter a value for brightness (a real number in interval [-1.0, 1.0], neutral=0.0):
       ACTION_READLN brightness
     END
@@ -223,7 +223,7 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
     // input gamma
     PRINT @202  // Enter a value for gamma (a real number > 0.0, neutral=1.0):
     ACTION_READLN gamma
-    OUTER_WHILE (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]+\(\.[0-9]+\)?$~) || NOT (~%gamma%~ STRING_MATCHES_REGEXP ~-?0\(\.0+\)?$~) BEGIN
+    OUTER_WHILE (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) || NOT (~%gamma%~ STRING_MATCHES_REGEXP ~-?0?\(\.0+\)?$~) BEGIN
       PRINT @202  // Enter a value for gamma (a real number > 0.0, neutral=1.0):
       ACTION_READLN gamma
     END
