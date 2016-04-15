@@ -59,7 +59,7 @@ vec4 a7ApplyFilters( vec4 color )
 
     // EE engine 2.x contains additional shader files
     ACTION_IF (FILE_EXISTS_IN_GAME ~fpsprite.glsl~) BEGIN
-      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fpfont.glsl~ ~fpselect.glsl~ ~fpsprite.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
+      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fpfont.glsl~ ~fpseam.glsl~ ~fpselect.glsl~ ~fpsprite.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
     END ELSE BEGIN
       ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
     END
