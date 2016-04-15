@@ -76,3 +76,8 @@ fpFont.GLSL   Used for game text.
 fpSelect.GLSL Used for sprite highlighting.
 fpSprite.GLSL Used for the sprite outlines.
 ```
+
+Additional shader files since game engine v2.1:
+```
+fpseam.GLSL   Used for map background.
+```
