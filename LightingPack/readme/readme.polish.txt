@@ -1,7 +1,7 @@
 Opcje dostosowywania Shader Pack: Lightning dla Edycji Rozszerzonych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wersja:       2.3
+Wersja:       2.4
 Autor:        argent77
 Pobierać z:   http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
 
@@ -63,9 +63,16 @@ fpFont.GLSL   Używane do tekstów w grze.
 fpSelect.GLSL Używane do podświetlania sprite'ów.
 fpSprite.GLSL Używane do obramowania sprite'ów.
 
+Dodatkowe pliki shaderów dla wersji silnika v2.1:
+fpseam.GLSL   Wykorzystywany do tła map.
+
 
 6. Version History
 ~~~~~~~~~~~~~~~~~~
+
+v2.4 (2016-04-15)
+- Added support for Enhanced Edition patch v2.1
+- Improved validation of numbers in manual input subcomponent
 
 v2.3 (2016-04-01)
 - Added support for Enhanced Edition patches v2.0

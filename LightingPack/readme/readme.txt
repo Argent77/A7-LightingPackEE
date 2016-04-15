@@ -1,7 +1,7 @@
 Shader Pack: Lighting adjustments for the Enhanced Edition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:       2.3
+Version:       2.4
 Author:        argent77
 Download from: http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
 
@@ -81,10 +81,16 @@ fpFont.GLSL   Used for game text.
 fpSelect.GLSL Used for sprite highlighting.
 fpSprite.GLSL Used for the sprite outlines.
 
+Additional shader files since game engine v2.1:
+fpseam.GLSL   Used for map background.
 
 
 6. Version History
 ~~~~~~~~~~~~~~~~~~
+
+v2.4 (2016-04-15)
+- Added support for Enhanced Edition patch v2.1
+- Improved validation of numbers in manual input subcomponent
 
 v2.3 (2016-04-01)
 - Added support for Enhanced Edition patches v2.0
