@@ -67,7 +67,7 @@ Usage of shader files in the game:
 fpDraw.GLSL   Used for every colored areas of the screen, except for videos.
 fpTone.GLSL   Used for grayscaled areas of the screen (e.g. disabled buttons or time stop effect).
 fpYUV.GLSL    Used for video output.
-fpYUVGRY.GLSL Used for grayscaled video output (currently only used in BG2:EE).
+fpYUVGRY.GLSL Used for grayscaled video output.
 ```
 
 Additional shader files since game engine v2.0:
