@@ -1,9 +1,9 @@
-#Shader Pack: Lighting adjustments for the Enhanced Edition
+# Shader Pack: Lighting adjustments for the Enhanced Edition
 
 **Author:** Argent77
 
 
-##Introduction
+## Introduction
 
 The original Infinity Engine games provided options to adjust brightness and contrast which 
 helped a lot, especially in dark dungeons or at night time. Unfortunately these options have 
@@ -20,7 +20,7 @@ or browser.
       graphics options of the games.
 
 
-##Installation
+## Installation
 
 This mod uses WeiDU for the installation. To install it, simply execute the file `setup-LightingPack.exe` 
 (or your OS-specific equivalent) and follow the instructions on screen.
@@ -31,12 +31,12 @@ to install this mod as late as possible. For modifying the scripts manually see 
 **Important:** You need BG:EE v1.2 or higher to see any effect!
 
 
-##Uninstallation & Re-installation
+## Uninstallation & Re-installation
 
 Simply run `setup-LightingPack.exe` again and follow the instructions on screen.
 
 
-##Compatibility & Troubleshooting
+## Compatibility & Troubleshooting
 
 This mod attempts to make as few as possible changes to the script files to retain 
 max. compatibility with other mods that affect the respective shader scripts.
@@ -51,7 +51,7 @@ respective default shortcut on your OS to quit the game and fix the error.
 If you are unable to repair the files manually, you can re-install the mod at anytime.
 
 
-##How to modify lighting values after installation?
+## How to modify lighting values after installation?
 
 If you want to change one or more settings after the mod has been installed, you can find 
 the respective files (see below) in the override folder of your game installation.
