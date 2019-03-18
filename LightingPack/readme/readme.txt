@@ -1,13 +1,16 @@
 Shader Pack: Lighting adjustments for the Enhanced Edition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Version:       2.4
-Author:        argent77
-Download from: http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
+Version:      2.4
+Author:       Argent77
+Download:     http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
+              https://github.com/Argent77/A7-LightingPackEE/releases/latest
+Discussion:   http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/
+              https://forums.beamdog.com/discussion/36828/mod-lighting-pack-for-the-enhanced-edition
+              
 
-
-1. Introduction
-~~~~~~~~~~~~~~~
+Introduction
+~~~~~~~~~~~~
 
 The original Infinity Engine games provided options to adjust brightness and contrast which 
 helped a lot, especially in dark dungeons or at night time. Unfortunately these options have 
@@ -24,8 +27,8 @@ Note: Changes made by this mod will not be visible if you select "Alternative re
       graphics options of the games.
 
 
-2. Installation
-~~~~~~~~~~~~~~~
+Installation
+~~~~~~~~~~~~
 
 This mod uses WeiDU for the installation. To install it, simply execute the file 
 setup-LightingPack.exe (or your OS-specific equivalent) and follow the instructions on screen.
@@ -36,14 +39,14 @@ to install this mod as late as possible. For modifying the scripts manually see 
 Important: You need BG:EE v1.2 or higher to see any effect!
 
 
-3. Uninstallation & Re-installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Uninstallation & Re-installation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Simply run setup-LightingPack.exe again and follow the instructions on screen.
 
 
-4. Compatibility & Troubleshooting
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compatibility & Troubleshooting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This mod attempts to make as few as possible changes to the script files to retain 
 max. compatibility with other mods that affect the respective shader scripts.
@@ -58,8 +61,8 @@ respective default shortcut on your OS to quit the game and fix the error.
 If you are unable to repair the files manually, you can re-install the mod at anytime.
 
 
-5. How to modify lighting values after installation?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to modify lighting values after installation?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to change one or more settings after the mod has been installed, you can find 
 the respective files (see below) in the override folder of your game installation.
@@ -85,8 +88,26 @@ Additional shader files since game engine v2.1:
 fpseam.GLSL   Used for map background.
 
 
-6. Version History
-~~~~~~~~~~~~~~~~~~
+Credits
+~~~~~~~
+
+Coding and testing: Argent77
+
+Polish translation: Cahir
+
+
+Copyright Notice
+~~~~~~~~~~~~~~~~
+
+The mod "Shader Pack: Lighting adjustments for the Enhanced Edition" is licensed under the "Creative Commons 
+Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+
+Version History
+~~~~~~~~~~~~~~~
+
+v2.5
+- Added proper Credits and Copyright section to the readme
 
 v2.4 (2016-04-15)
 - Added support for Enhanced Edition patch v2.1

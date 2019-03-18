@@ -1,13 +1,16 @@
 Opcje dostosowywania Shader Pack: Lightning dla Edycji Rozszerzonych
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wersja:       2.4
-Autor:        argent77
-Pobierać z:   http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
+Version:      2.4
+Author:       Argent77
+Download:     http://www.shsforums.net/files/file/1080-lighting-pack-shader-scripts-for-the-enhanced-edition/
+              https://github.com/Argent77/A7-LightingPackEE/releases/latest
+Discussion:   http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/
+              https://forums.beamdog.com/discussion/36828/mod-lighting-pack-for-the-enhanced-edition
 
 
-1. Wstęp
-~~~~~~~~
+Wstęp
+~~~~~
 
 Oryginalne wersje gier opartych na silniku Infinity Engine posiadały opcje korygowania jasności i kontrastu, które były niezwykle przydatne, zwłaszcza w ciemnych lokacjach lub w nocy. Niestety opcje te zostały usunięte w Edycjach Rozszerzonych tych gier.
 
@@ -19,8 +22,8 @@ Jeśli chcesz mieć ogólny pogląd jak dane ustawienia mają się do tych orygi
 Uwaga: Zmiany dokonane przez tą modyfikację nie będą widoczne, jeśli w opcjach graficznych gry wybierzesz opcję "Alternatywny renderer". 
 
 
-2. Instalacja
-~~~~~~~~~~~~~
+Instalacja
+~~~~~~~~~~
 
 Mod ten wykorzystuje WeiDU podczas instalacji. Aby go zainstalować uruchom po prostu plik setup-LightingPack.exe (lub jego odpowiednik dla systemu OS), a następnie kieruj się instrukcjami pojawiającymi się na ekranie.
 
@@ -29,14 +32,14 @@ Jeżli planujesz przeinstalowanie skryptów shadera przy użyciu innych ustawie�
 Ważne: Aby ujrzeć efekty działania moda musisz mieć zainstalowane BG:EE w wersji 1.2 lub wyższej! 
 
 
-3. Odinstalowywanie i Przeinstalowywanie
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Odinstalowywanie i Przeinstalowywanie
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Uruchom po prostu plik setup-LightingPack.exe i ponownie kieruj się wskazówkami pojawiającymi się na ekranie.
 
 
-4. Kompatybilność i Rozwiązywanie problemów
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Kompatybilność i Rozwiązywanie problemów
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mod ten ma w zamierzeniu dokonywać jak najmniej zmian w plikach skryptów, tak aby zachować maksymalną kompatybilność z innymi modami ingerującymi w odpowiednie skrypty shaderów. Istnieje niewielka szansa, że mod ten nie będzie działał prawidłowo, jeśli inne mody dokonały niekompatybilnych zmian w plikach skryptów. W takim przypadku, zainstaluj ten mod jako pierwszy.
 
@@ -45,8 +48,8 @@ Jeżeli po uruchomieniu gry ujrzysz czarny ekran lub zniekształcone piksele, wc
 Jeżeli nie będziesz w stanie ręcznie naprawić plików, możesz w dowolnej chwili przeinstalować mod. 
 
 
-5. Jak modyfikować wartości oświetlenia po instalacji? 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Jak modyfikować wartości oświetlenia po instalacji? 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Jeśli zechcesz zmienić któreś z ustawień już po zainstalowaniu tego moda, odpowiednie pliki (patrz niżej) znajdziesz w folderze override.
 
@@ -67,8 +70,26 @@ Dodatkowe pliki shaderów dla wersji silnika v2.1:
 fpseam.GLSL   Wykorzystywany do tła map.
 
 
-6. Version History
-~~~~~~~~~~~~~~~~~~
+Credits
+~~~~~~~
+
+Coding and testing: Argent77
+
+Polish translation: Cahir
+
+
+Copyright Notice
+~~~~~~~~~~~~~~~~
+
+The mod "Shader Pack: Lighting adjustments for the Enhanced Edition" is licensed under the "Creative Commons 
+Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/licenses/by-sa/4.0/).
+
+
+Version History
+~~~~~~~~~~~~~~~
+
+v2.5
+- Added proper Credits and Copyright section to the readme
 
 v2.4 (2016-04-15)
 - Added support for Enhanced Edition patch v2.1

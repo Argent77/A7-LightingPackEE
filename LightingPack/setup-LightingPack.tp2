@@ -1,11 +1,16 @@
 BACKUP ~LightingPack/backup~
-AUTHOR ~Argent77 at Spellhold Studios Forum~
+AUTHOR ~Argent77 at Spellhold Studios Forum (www.shsforums.net)~
 VERSION ~v2.4~
 
 README ~LightingPack/readme/readme.%LANGUAGE%.txt~ ~LightingPack/readme/readme.txt~
 
-LANGUAGE  ~English~ ~english~ ~LightingPack/languages/english/setup.tra~
-LANGUAGE  ~Polski (tlumaczenie: Cahir)~ ~polish~ ~LightingPack/languages/english/setup.tra~ ~LightingPack/languages/polish/setup.tra~
+LANGUAGE  ~English~
+          ~english~
+          ~LightingPack/languages/english/setup.tra~
+LANGUAGE  ~Polski (tlumaczenie: Cahir)~
+          ~polish~
+          ~LightingPack/languages/english/setup.tra~
+          ~LightingPack/languages/polish/setup.tra~
 
 // Neutral settings
 BEGIN @100    // Neutral settings for contrast, brightness and gamma

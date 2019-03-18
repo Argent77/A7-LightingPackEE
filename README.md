@@ -81,3 +81,8 @@ Additional shader files since game engine v2.1:
 ```
 fpseam.GLSL   Used for map background.
 ```
+
+
+## Copyright Notice
+
+The mod "Shader Pack: Lighting adjustments for the Enhanced Edition" is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
