@@ -2,6 +2,7 @@
 *.baf text
 *.bat text eol=crlf
 *.d text
+*.glsl text eof=lf
 *.html text
 *.sh text eol=lf
 *.tp2 text
