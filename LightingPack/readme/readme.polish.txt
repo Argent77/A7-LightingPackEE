@@ -88,8 +88,11 @@ Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/li
 Version History
 ~~~~~~~~~~~~~~~
 
-v2.5
-- Added proper Credits and Copyright section to the readme
+v3.0
+- Added settings: Color Temperature
+- Added advanced settings: Hue/Saturation/Lightness
+- Added proper Credits and Copyright sections to the readme
+- Internal restructuring
 
 v2.4 (2016-04-15)
 - Added support for Enhanced Edition patch v2.1

@@ -20,8 +20,12 @@ This mod provides a way to bring back the means to adjust brightness, contrast a
 You can choose from a set of predefined lighting configurations or enter the desired values manually.
 
 If you want to get a general idea on how each setting looks compared to the original, go into the 
-preview folder of this mod and open the file "lighting_preview.jpg" with your graphics viewer 
+preview folder of this mod and open the file "lighting_preview.jpg" with your image viewer 
 or browser.
+
+Since version 3.0 of the mod you can also adjust color temperature as well as hue, saturation and 
+lightness. The latter set of options have been marked as "Advanced Settings" as they are useful only 
+in specific cases.
 
 Note: Changes made by this mod will not be visible if you select "Alternative renderer" in the 
       graphics options of the games.
@@ -34,7 +38,8 @@ This mod uses WeiDU for the installation. To install it, simply execute the file
 setup-LightingPack.exe (or your OS-specific equivalent) and follow the instructions on screen.
 
 If you plan to re-install the shader scripts with different settings, it is highly recommended 
-to install this mod as late as possible. For modifying the scripts manually see chapter 5.
+to install this mod as late as possible. For modifying the scripts manually see chapter "How to 
+modify lighting values after installation?" below.
 
 Important: You need BG:EE v1.2 or higher to see any effect!
 
@@ -73,6 +78,9 @@ the variables labeled as 'brightness', 'contrast' and 'gamma' located in the upp
 each script. The shader files contain short comments on how to set the values correctly. 
 You should set the variables in all three shader files to the same amount for best results.
 
+The same applies to color temperature as well as the advanced settings of hue, saturation and 
+lightness.
+
 Usage of shader files in the game:
 fpDraw.GLSL   Used for every colored areas of the screen, except for videos.
 fpTone.GLSL   Used for grayscaled areas of the screen (e.g. disabled buttons or time stop effect).
@@ -106,8 +114,11 @@ Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/li
 Version History
 ~~~~~~~~~~~~~~~
 
-v2.5
-- Added proper Credits and Copyright section to the readme
+v3.0
+- Added settings: Color Temperature
+- Added advanced settings: Hue/Saturation/Lightness
+- Added proper Credits and Copyright sections to the readme
+- Internal restructuring
 
 v2.4 (2016-04-15)
 - Added support for Enhanced Edition patch v2.1

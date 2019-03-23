@@ -1,84 +1,292 @@
 // WeiDU functions
 
-// Extends existing files
-DEFINE_ACTION_FUNCTION InstallLighting
+// Adds Contrast/Brightness/Gamma adjustments to shader files
+DEFINE_ACTION_FUNCTION INSTALL_CBG
 STR_VAR
   contrast    = "1.0"
   brightness  = "0.0"
   gamma       = "1.0"
 BEGIN
   // arguments must be valid numbers
-  ACTION_IF NOT ((~%contrast%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) ||
-                 (~%brightness%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~) ||
-                 (~%gamma%~ STRING_MATCHES_REGEXP ~-?[0-9]*\(\.[0-9]+\)?$~)) BEGIN
-// shader scripts will be prepended by the following text
-<<<<<<<< LightingPack/inlined/functions.glsl
-// Use the same values in all affected GLSL files for best results.
-const lowp float a7contrast   = %contrast%;    // modify to adjust contrast (default: 1.0, lower: <1.0, higher: >1.0)
-const lowp float a7brightness = %brightness%;    // modify to adjust brightness (default: 0.0, darker: <0.0, brighter: >0.0)
-const lowp float a7gamma      = %gamma%;    // modify to adjust gamma correction (default: 1.0, darker: <1.0, brighter: >1.0)
+  ACTION_IF NOT ((~%contrast%~ STRING_MATCHES_REGEXP ~%REG_FLOAT_POS%~) ||
+                 (~%brightness%~ STRING_MATCHES_REGEXP ~%REG_FLOAT%~) ||
+                 (~%gamma%~ STRING_MATCHES_REGEXP ~%REG_FLOAT_POS%~)) BEGIN
+    LAF GET_SHADER_FILES RET_ARRAY shader_files END
+    ACTION_PHP_EACH shader_files AS index => file BEGIN
+      COPY_EXISTING ~%file%~ ~override~
+        PATCH_IF (INDEX_BUFFER(~a7contrast~) < 0) BEGIN
+          // inserting variable definitions
+          LPF INSERT_HELP_COMMENT RET pos END
+          INSERT_FILE pos ~%MOD_FOLDER%/glsl/cbg_def.glsl~ EVAL
 
-vec3 a7ContrastFilter( vec3 color )
-{
-  if (a7contrast != 1.0)
-    color = ( ( color - 0.5 ) * max( a7contrast, 0.0 ) ) + 0.5;
-  return color;
-}
+          // inserting global function definition
+          LPF INSERT_GLOBAL_DEF END
 
-vec3 a7BrightnessFilter( vec3 color )
-{
-  if (a7brightness != 0.0)
-    color += a7brightness;
-  return color;
-}
+          // inserting specific CBG function calls to ApplyFilters
+          SET pos = INDEX_BUFFER(~vec4[ %TAB%]+a7ApplyFilters~)
+          PATCH_IF (pos >= 0) BEGIN
+            SET pos = INDEX_BUFFER(~{~ pos)
+            PATCH_IF (pos >= 0) BEGIN
+              LPF SKIP_NEWLINES INT_VAR start_pos = pos skip_whitespace = 0 RET pos = new_pos END
+              PATCH_IF (pos >= 0) BEGIN
+                INSERT_FILE pos ~%MOD_FOLDER%/glsl/cbg_call.glsl~
+              END
+            END
+          END
 
-vec3 a7GammaFilter( vec3 color )
-{
-  if (a7gamma != 1.0)
-    color = pow( color, vec3( 1.0 / a7gamma ) );
-  return color;
-}
+          // inserting function definitions
+          SET pos = RINDEX_BUFFER(~const lowp float a7~ BUFFER_LENGTH)
+          PATCH_IF (pos >= 0) BEGIN
+            LPF SKIP_NEWLINES INT_VAR start_pos = pos RET pos = new_pos END
+            PATCH_IF (pos >= 0) BEGIN
+              INSERT_FILE pos ~%MOD_FOLDER%/glsl/cbg_func.glsl~
+            END
+          END
 
-vec4 a7ApplyFilters( vec4 color )
-{
-  // applying contrast
-  color.rgb = a7ContrastFilter(color.rgb);
-
-  // applying brightness
-  color.rgb = a7BrightnessFilter(color.rgb);
-
-  // applying gamma
-  color.rgb = a7GammaFilter(color.rgb);
-
-  // finalizing pixel data
-  return vec4( color.rgb, color.a );
-}
-
-
->>>>>>>>
-
-    // EE engine 2.x contains additional shader files
-    ACTION_IF (FILE_EXISTS_IN_GAME ~fpsprite.glsl~) BEGIN
-      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fpfont.glsl~ ~fpseam.glsl~ ~fpselect.glsl~ ~fpsprite.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
-    END ELSE BEGIN
-      ACTION_DEFINE_ARRAY a7_shader_files BEGIN ~fpdraw.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
-    END
-
-    // Adjusting shader return values only, for max. mod compatibility
-    ACTION_PHP_EACH a7_shader_files AS index => file BEGIN
-      ACTION_IF (FILE_EXISTS_IN_GAME ~%file%~) BEGIN
-        ACTION_IF ((FILE_CONTAINS_EVALUATED(~%file%~ ~a7FragColor~)) == 0) BEGIN
-          COPY_EXISTING ~%file%~ ~override~
-            INSERT_FILE 0 ~LightingPack/inlined/functions.glsl~
-            REPLACE_TEXTUALLY EVALUATE_REGEXP 
-            ~^\([ %TAB%]*\)gl_FragColor\(.+\)~ 
-            ~\1vec4 a7FragColor\2%LNL%\1gl_FragColor = a7ApplyFilters( a7FragColor );~
-            EVALUATE_BUFFER
-          BUT_ONLY
+          // inserting global function call
+          LPF INSERT_GLOBAL_CALL END
         END ELSE BEGIN
-          WARN ~File has already been extended: %file%. Skipping...~
+          PATCH_WARN ~File has already been extended: %file%. Skipping...~
         END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+END
+
+
+// Adds Hue/Saturation/Lightness adjustments to shader files
+DEFINE_ACTION_FUNCTION INSTALL_HSL
+STR_VAR
+  hue         = "0.0"
+  saturation  = "1.0"
+  lightness   = "1.0"
+BEGIN
+  // arguments must be valid numbers
+  ACTION_IF NOT ((~%hue%~ STRING_MATCHES_REGEXP ~%REG_FLOAT%~) ||
+                 (~%saturation%~ STRING_MATCHES_REGEXP ~%REG_FLOAT_POS%~) ||
+                 (~%lightness%~ STRING_MATCHES_REGEXP ~%REG_FLOAT_POS%~)) BEGIN
+    LAF GET_SHADER_FILES RET_ARRAY shader_files END
+    ACTION_PHP_EACH shader_files AS index => file BEGIN
+      COPY_EXISTING ~%file%~ ~override~
+        PATCH_IF (INDEX_BUFFER(~a7saturation~) < 0) BEGIN
+          // inserting variable definitions
+          LPF INSERT_HELP_COMMENT RET pos END
+          INSERT_FILE pos ~%MOD_FOLDER%/glsl/hsl_def.glsl~ EVAL
+        END
+
+        // inserting global function definition
+        LPF INSERT_GLOBAL_DEF END
+
+        PATCH_IF (INDEX_BUFFER(~color.rgb[ %TAB%]*=[ %TAB%]*a7HSLFilter([ %TAB%]*color.rgb[ %TAB%]*);~) < 0) BEGIN
+          // inserting specific HSL function calls to ApplyFilters
+          SET pos1 = INDEX_BUFFER(~vec4[ %TAB%]+a7ApplyFilters~)
+          PATCH_IF (pos1 >= 0) BEGIN
+            SET pos2 = INDEX_BUFFER(~[ %TAB%]*//[ %TAB%]*applying color temperature~ pos1)
+            PATCH_IF (pos2 < 0) BEGIN
+              SET pos2 = INDEX_BUFFER(~[ %TAB%]*//[ %TAB%]*finalizing pixel data~ pos1)
+            END
+            PATCH_IF (pos2 >= 0) BEGIN
+              INSERT_FILE pos2 ~%MOD_FOLDER%/glsl/hsl_call.glsl~
+            END
+          END
+        END
+
+        PATCH_IF (INDEX_BUFFER(~a7RGBtoHSL~) < 0) BEGIN
+          // inserting generalized function definitions
+          SET pos = RINDEX_BUFFER(~const lowp float a7~ BUFFER_LENGTH)
+          PATCH_IF (pos >= 0) BEGIN
+            LPF SKIP_NEWLINES INT_VAR start_pos = pos RET pos = new_pos END
+            PATCH_IF (pos >= 0) BEGIN
+              INSERT_FILE pos ~%MOD_FOLDER%/glsl/hsl_func_base.glsl~
+            END
+          END
+        END
+
+        PATCH_IF (INDEX_BUFFER(~vec3[ %TAB%]+a7HSLFilter([ %TAB%]*vec3[ %TAB%]+color[ %TAB%]*)~) < 0) BEGIN
+          // inserting specialized function definition
+          SET pos = INDEX_BUFFER(~[ %TAB%]*vec4[ %TAB%]+a7ApplyFilters([ %TAB%]*vec4[ %TAB%]+color[ %TAB%]*)~)
+          PATCH_IF (pos >= 0) BEGIN
+            INSERT_FILE pos ~%MOD_FOLDER%/glsl/hsl_func_special.glsl~
+          END
+        END ELSE BEGIN
+          PATCH_WARN ~File has already been extended: %file%. Skipping...~
+        END
+
+        // inserting global function call
+        LPF INSERT_GLOBAL_CALL END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+END
+
+
+// Adds color temperature adjustments to shader files
+DEFINE_ACTION_FUNCTION INSTALL_TEMPERATURE
+STR_VAR
+  kelvin  = "0"
+BEGIN
+  // arguments must be valid numbers
+  ACTION_IF NOT (~%kelvin%~ STRING_MATCHES_REGEXP ~%REG_FLOAT_POS%~) BEGIN
+    LAF GET_SHADER_FILES RET_ARRAY shader_files END
+    ACTION_PHP_EACH shader_files AS index => file BEGIN
+      COPY_EXISTING ~%file%~ ~override~
+        PATCH_IF (INDEX_BUFFER(~a7kelvin~) < 0) BEGIN
+          // inserting variable definitions
+          LPF INSERT_HELP_COMMENT RET pos END
+          INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_def.glsl~ EVAL
+        END
+
+        // inserting global function definition
+        LPF INSERT_GLOBAL_DEF END
+
+        // inserting specific color temperature function calls to ApplyFilters
+        PATCH_IF (INDEX_BUFFER(~color.rgb[ %TAB%]*=[ %TAB%]*a7KelvinFilter([ %TAB%]*color.rgb[ %TAB%]*);~) < 0) BEGIN
+          SET pos = INDEX_BUFFER(~vec4[ %TAB%]+a7ApplyFilters~)
+          PATCH_IF (pos >= 0) BEGIN
+            SET pos = INDEX_BUFFER(~[ %TAB%]*//[ %TAB%]*finalizing pixel data~ pos)
+            PATCH_IF (pos >= 0) BEGIN
+              INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_call.glsl~
+            END
+          END
+        END
+
+        PATCH_IF (INDEX_BUFFER(~a7RGBtoHSL~) < 0) BEGIN
+          // inserting generalized HSL function definitions
+          SET pos = RINDEX_BUFFER(~const lowp float a7~ BUFFER_LENGTH)
+          PATCH_IF (pos >= 0) BEGIN
+            LPF SKIP_NEWLINES INT_VAR start_pos = pos RET pos = new_pos END
+            PATCH_IF (pos >= 0) BEGIN
+              INSERT_FILE pos ~%MOD_FOLDER%/glsl/hsl_func_base.glsl~
+            END
+          END
+        END
+
+        PATCH_IF (INDEX_BUFFER(~vec3[ %TAB%]+a7ColorTemp([ %TAB%]*)~) < 0) BEGIN
+          // inserting generalized temperature function definitions
+          SET pos = RINDEX_BUFFER(~const lowp float a7~ BUFFER_LENGTH)
+          PATCH_IF (pos >= 0) BEGIN
+            LPF SKIP_NEWLINES INT_VAR start_pos = pos RET pos = new_pos END
+            PATCH_IF (pos >= 0) BEGIN
+              INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_func_base.glsl~
+            END
+          END
+        END
+
+        PATCH_IF (INDEX_BUFFER(~vec3[ %TAB%]+a7ColorTemp([ %TAB%]+)~) < 0) BEGIN
+          // inserting specialized temperature function definitions
+          SET pos = INDEX_BUFFER(~[ %TAB%]*vec4[ %TAB%]+a7ApplyFilters([ %TAB%]*vec4[ %TAB%]+color[ %TAB%]*)~)
+          PATCH_IF (pos >= 0) BEGIN
+            INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_func_special.glsl~
+          END
+        END ELSE BEGIN
+          PATCH_WARN ~File has already been extended: %file%. Skipping...~
+        END
+
+        // inserting global function call
+        LPF INSERT_GLOBAL_CALL END
+      BUT_ONLY IF_EXISTS
+    END
+  END
+END
+
+
+// Inserts initial help comment if it doesn't exist. Returns position right after the comment.
+DEFINE_PATCH_FUNCTION INSERT_HELP_COMMENT
+RET pos
+BEGIN
+  TEXT_SPRINT help_comment_text ~Use the same values in all affected GLSL files for best results.~
+  SET pos = INDEX_BUFFER(EXACT_MATCH ~%help_comment_text%~)
+  PATCH_IF (pos >= 0) BEGIN
+    LPF SKIP_NEWLINES INT_VAR start_pos = pos skip_whitespace = 0 RET pos = new_pos END
+  END ELSE BEGIN
+    TEXT_SPRINT help_comment ~// %help_comment_text%%LNL%~
+    SET len = STRING_LENGTH ~%help_comment%~
+    INSERT_BYTES 0 len
+    WRITE_ASCIIE 0 ~%help_comment%~ (len)
+    SET pos = len
+  END
+END
+
+// Inserts global function definition a7ApplyFilters()
+DEFINE_PATCH_FUNCTION INSERT_GLOBAL_DEF
+BEGIN
+  PATCH_IF (INDEX_BUFFER(~vec4[ %TAB%]+a7ApplyFilters[ %TAB%]*([ %TAB%]*vec4[ %TAB%]+color[ %TAB%]*)~) < 0) BEGIN
+    SET pos = RINDEX_BUFFER(~const lowp float a7~ BUFFER_LENGTH)
+    PATCH_IF (pos >= 0) BEGIN
+      LPF SKIP_NEWLINES INT_VAR start_pos = pos RET pos = new_pos END
+      PATCH_IF (pos >= 0) BEGIN
+        INSERT_FILE pos ~%MOD_FOLDER%/glsl/gen_call.glsl~
       END
     END
+  END
+END
+
+
+// Inserts global function call to a7ApplyFilters()
+DEFINE_PATCH_FUNCTION INSERT_GLOBAL_CALL
+BEGIN
+  PATCH_IF (INDEX_BUFFER(~gl_FragColor[ %TAB]*=[ %TAB]*a7ApplyFilters~) < 0) BEGIN
+    REPLACE_TEXTUALLY EVALUATE_REGEXP
+      ~^\([ %TAB%]*\)gl_FragColor\(.+\)~
+      ~\1vec4 a7FragColor\2%LNL%\1gl_FragColor = a7ApplyFilters( a7FragColor );~
+  END
+END
+
+
+// Helper function: find next non-newline character
+DEFINE_PATCH_FUNCTION SKIP_NEWLINES
+INT_VAR
+  start_pos = 0
+  skip_whitespace = 1
+  reverse = 0
+RET
+  new_pos
+BEGIN
+  SET new_pos = start_pos
+
+  PATCH_IF (skip_whitespace) BEGIN
+    TEXT_SPRINT nl ~[ %TAB%%WNL%]~
+    TEXT_SPRINT no_nl ~[^ %TAB%%WNL%]~
+  END ELSE BEGIN
+    TEXT_SPRINT nl ~[%WNL%]~
+    TEXT_SPRINT no_nl ~[^%WNL%]~
+  END
+
+  PATCH_IF (reverse) BEGIN
+    SET start_pos = RINDEX_BUFFER(~[%WNL%]~ start_pos)
+  END ELSE BEGIN
+    SET start_pos = INDEX_BUFFER(~[%WNL%]~ start_pos)
+  END
+
+  PATCH_IF (start_pos >= 0) BEGIN
+    PATCH_IF (reverse) BEGIN
+      SET start_pos = RINDEX_BUFFER(~%nl%~ start_pos)
+    END ELSE BEGIN
+      SET start_pos = INDEX_BUFFER(~%nl%~ start_pos)
+    END
+  END
+
+  PATCH_IF (start_pos >= 0) BEGIN
+    PATCH_IF (reverse) BEGIN
+      SET start_pos = RINDEX_BUFFER(~%no_nl%~ start_pos)
+    END ELSE BEGIN
+      SET start_pos = INDEX_BUFFER(~%no_nl%~ start_pos)
+    END
+    PATCH_IF (start_pos >= 0) BEGIN
+      SET new_pos = start_pos
+    END
+  END
+END
+
+
+// Returns an array of available shader files
+DEFINE_ACTION_FUNCTION GET_SHADER_FILES
+RET_ARRAY shader_files
+BEGIN
+  // EE engine 2.x contains additional shader files
+  ACTION_IF (FILE_EXISTS_IN_GAME ~fpsprite.glsl~) BEGIN
+    ACTION_DEFINE_ARRAY shader_files BEGIN ~fpdraw.glsl~ ~fpfont.glsl~ ~fpseam.glsl~ ~fpselect.glsl~ ~fpsprite.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
+  END ELSE BEGIN
+    ACTION_DEFINE_ARRAY shader_files BEGIN ~fpdraw.glsl~ ~fptone.glsl~ ~fpyuv.glsl~ ~fpyuvgry.glsl~ END
   END
 END

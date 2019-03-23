@@ -1,6 +1,8 @@
 @1 = ~Shader script files for lighting control~
-@2 = ~This mod requires an Enhanced Edition game to be installed.~
-@3 = ~You need BG:EE v1.2 or higher for this mod to work.~
+@2 = ~Modify Color Temperature~
+@3 = ~Advanced settings: Modify Hue/Saturation/Lightness~
+
+@10 = ~Advanced settings~
 
 @100 = ~Neutral settings for contrast, brightness and gamma~
 
@@ -37,7 +39,47 @@
 @204 = ~Contrast   = %contrast%~
 @205 = ~Brightness = %brightness%~
 @206 = ~Gamma      = %gamma%~
+
 @207 = ~Are the values correct [y/n/c]?~
 @208 = ~Are the values correct? (Enter y for yes, n for no or c for cancel):~
+@209 = ~Is the value correct [y/n/c]?~
+@210 = ~Is the value correct? (Enter y for yes, n for no or c for cancel):~
+@211 = ~The following value has been entered:~
+@212 = ~Using "neutral" value.~
 
-@300 = ~Installation cancelled by user.~
+@300 = ~Apply preset "Arctic blue" (15,000 Kelvin)~
+@301 = ~Apply preset "Overcast sky" (7,500 Kelvin)~
+@302 = ~Apply preset "Daylight (neutral)" (6,500 Kelvin)~
+@303 = ~Apply preset "Sunlight" (5,500 Kelvin)~
+@304 = ~Apply preset "Moonlight" (4,200 Kelvin)~
+@305 = ~Apply preset "Sunset" (3,500 Kelvin)~
+@306 = ~Apply preset "Lightbulb" (2,800 Kelvin)~
+@307 = ~Apply preset "Candlelight" (1,900 Kelvin)~
+@308 = ~Enter value for color temperature manually~
+@350 = ~Enter a value for color temperature (interval [1000, 40000], neutral=6500, disable=0):~
+@351 = ~Temperature = %kelvin% Kelvin~
+@352 = ~Examples:
+Arctic blue:  15000
+Overcast sky: 7500
+Daylight:     6500 (neutral)
+Sunlight:     5500
+Moonlight:    4200
+Sunset:       3500
+Lightbulb:    2800
+Candle:       1900~
+
+@400 = ~Enter value for hue manually~
+@401 = ~Enter value for saturation manually~
+@402 = ~Enter value for lightness manually~
+@403 = ~Enter values for hue, saturation, lightness~
+
+@410 = ~Enter a value for hue (any number, neutral=0.0):~
+@411 = ~Enter a value for saturation (number >= 0.0, neutral=1.0):~
+@412 = ~Enter a value for lightness (number >= 0.0, neutral=1.0):~
+@413 = ~Hue         = %hue%~
+@414 = ~Saturation  = %saturation%~
+@415 = ~Lightness   = %lightness%~
+
+@1000 = ~This mod requires an Enhanced Edition game to be installed.~
+@1001 = ~You need BG:EE v1.2 or higher for this mod to work.~
+@1002 = ~Installation cancelled by user.~

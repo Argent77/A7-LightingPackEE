@@ -16,6 +16,10 @@ If you want to get a general idea on how each setting looks compared to the orig
 preview folder of this mod and open the file "lighting_preview.jpg" with your graphics viewer 
 or browser.
 
+Since version 3.0 of the mod you can also adjust color temperature as well as hue, saturation and 
+lightness. The latter set of options have been marked as "Advanced Settings" as they are useful only 
+in specific cases.
+
 **Note:** Changes made by this mod will not be visible if you select "Alternative renderer" in the 
       graphics options of the games.
 
@@ -61,6 +65,9 @@ values to your needs, open the respective file in your text editor (e.g. Notepad
 the variables labeled as 'brightness', 'contrast' and 'gamma' located in the upper section of 
 each script. The shader files contain short comments on how to set the values correctly. 
 You should set the variables in all three shader files to the same amount for best results.
+
+The same applies to color temperature as well as the advanced settings of hue, saturation and 
+lightness.
 
 Usage of shader files in the game:
 ```
