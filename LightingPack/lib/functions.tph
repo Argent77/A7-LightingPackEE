@@ -143,9 +143,12 @@ BEGIN
         PATCH_IF (INDEX_BUFFER(~color.rgb[ %TAB%]*=[ %TAB%]*a7KelvinFilter([ %TAB%]*color.rgb[ %TAB%]*);~) < 0) BEGIN
           SET pos = INDEX_BUFFER(~vec4[ %TAB%]+a7ApplyFilters~)
           PATCH_IF (pos >= 0) BEGIN
-            SET pos = INDEX_BUFFER(~[ %TAB%]*//[ %TAB%]*finalizing pixel data~ pos)
+            SET pos = INDEX_BUFFER(~[ %TAB%]*{~ pos)
             PATCH_IF (pos >= 0) BEGIN
-              INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_call.glsl~
+              SET pos = INDEX_BUFFER(~%LNL%~ pos) + 1
+              PATCH_IF (pos > 0) BEGIN
+                INSERT_FILE pos ~%MOD_FOLDER%/glsl/kelvin_call.glsl~
+              END
             END
           END
         END
