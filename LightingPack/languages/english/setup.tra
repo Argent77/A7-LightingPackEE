@@ -73,7 +73,7 @@ Candle:       1900~
 @402 = ~Enter value for lightness manually~
 @403 = ~Enter values for hue, saturation, lightness~
 
-@410 = ~Enter a value for hue (any number, neutral=0.0):~
+@410 = ~Enter a value for hue (interval [-1.0, 1.0], neutral=0.0):~
 @411 = ~Enter a value for saturation (number >= 0.0, neutral=1.0):~
 @412 = ~Enter a value for lightness (number >= 0.0, neutral=1.0):~
 @413 = ~Hue         = %hue%~
