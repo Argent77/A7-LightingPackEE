@@ -88,10 +88,11 @@ Attribution-ShareAlike 4.0 International License" (http://creativecommons.org/li
 Version History
 ~~~~~~~~~~~~~~~
 
-v3.0
+v3.0 (2019-xx-xx)
 - Added settings: Color Temperature
 - Added advanced settings: Hue/Saturation/Lightness
 - Added proper Credits and Copyright sections to the readme
+- Added German translation
 - Internal restructuring
 
 v2.4 (2016-04-15)

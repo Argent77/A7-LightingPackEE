@@ -8,7 +8,8 @@ ALWAYS
   OUTER_TEXT_SPRINT REG_ZERO ~^[+-]?\(0*\.\)?0+\([eE][+-]?[0-9]+\)?$~
 END
 
-README ~LightingPack/readme/readme.%LANGUAGE%.txt~ ~LightingPack/readme/readme.txt~
+README ~LightingPack/readme/readme-%LANGUAGE%.txt~
+       ~LightingPack/readme/readme.txt~
 
 LANGUAGE  ~English~
           ~english~
@@ -17,6 +18,10 @@ LANGUAGE  ~Polski (tlumaczenie: Cahir)~
           ~polish~
           ~LightingPack/languages/english/setup.tra~
           ~LightingPack/languages/polish/setup.tra~
+LANGUAGE  ~Deutsch~
+          ~german~
+          ~LightingPack/languages/english/setup.tra~
+          ~LightingPack/languages/german/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 ///// Shader script files for lighting control                   \\\\\
