@@ -14,10 +14,12 @@ Wstęp
 
 Oryginalne wersje gier opartych na silniku Infinity Engine posiadały opcje korygowania jasności i kontrastu, które były niezwykle przydatne, zwłaszcza w ciemnych lokacjach lub w nocy. Niestety opcje te zostały usunięte w Edycjach Rozszerzonych tych gier.
 
-Mod ten przywraca możliwość kontroli poziomu jasności, kontrastu i korekcji gamma. 
+Modyfikacja ta przywraca możliwość kontroli poziomu jaskrawości, kontrastu i korekcji gamma. 
 Możesz wybrać opcję z zestawu predefiniowanych konfiguracji oświetlenia lub wprowadzić pożądane wartości ręcznie.
 
 Jeśli chcesz mieć ogólny pogląd jak dane ustawienia mają się do tych oryginalnych, wejdź w folder preview tego moda i otwórz przy pomocy dowolnej przeglądarki graficznej lub internetowej plik o nazwie "lighting_preview.jpg".
+
+Począwszy od wersji 3.0 modyfikacja ta pozwala również na zmianę barwy, poziomu nasycenia oraz jasności. Ustawienia te zostały oznaczone jako „Ustawienia zaawansowane”, gdyż są une użyteczne tylko w określonych sytuacjach.
 
 Uwaga: Zmiany dokonane przez tą modyfikację nie będą widoczne, jeśli w opcjach graficznych gry wybierzesz opcję "Alternatywny renderer". 
 
@@ -25,35 +27,35 @@ Uwaga: Zmiany dokonane przez tą modyfikację nie będą widoczne, jeśli w opcj
 Instalacja
 ~~~~~~~~~~
 
-Mod ten wykorzystuje WeiDU podczas instalacji. Aby go zainstalować uruchom po prostu plik setup-LightingPack.exe (lub jego odpowiednik dla systemu OS), a następnie kieruj się instrukcjami pojawiającymi się na ekranie.
+Modyfikacja ta wykorzystuje WeiDU podczas instalacji. Aby ją zainstalować uruchom po prostu plik setup-LightingPack.exe (lub jego odpowiednik dla systemu OS), a następnie kieruj się instrukcjami pojawiającymi się na ekranie.
 
-Jeżli planujesz przeinstalowanie skryptów shadera przy użyciu innych ustawień, jest wysoce wskazane, abyś zainstalował ten mod najpóźniej, jak to możliwe. W rozdziale 5 znajdziesz informacje na temat ręcznej modyfikacji skryptów.
+Jeżli planujesz przeinstalowanie skryptów shadera przy użyciu innych ustawień, jest wysoce wskazane, aby zainstalować ten mod najpóźniej, jak to możliwe. W rozdziale 5 znajdziesz informacje na temat ręcznej modyfikacji skryptów.
 
-Ważne: Aby ujrzeć efekty działania moda musisz mieć zainstalowane BG:EE w wersji 1.2 lub wyższej! 
+Ważne: Aby ujrzeć efekty działania modyfikacji należy zainstalować BG:EE w wersji 1.2 lub wyższej! 
 
 
-Odinstalowywanie i Przeinstalowywanie
+Odinstalowywanie i przeinstalowywanie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Uruchom po prostu plik setup-LightingPack.exe i ponownie kieruj się wskazówkami pojawiającymi się na ekranie.
 
 
-Kompatybilność i Rozwiązywanie problemów
+Kompatybilność i rozwiązywanie problemów
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mod ten ma w zamierzeniu dokonywać jak najmniej zmian w plikach skryptów, tak aby zachować maksymalną kompatybilność z innymi modami ingerującymi w odpowiednie skrypty shaderów. Istnieje niewielka szansa, że mod ten nie będzie działał prawidłowo, jeśli inne mody dokonały niekompatybilnych zmian w plikach skryptów. W takim przypadku, zainstaluj ten mod jako pierwszy.
+Modyfikacja ta ma w zamierzeniu dokonywać jak najmniej zmian w plikach skryptów, tak aby zachować maksymalną kompatybilność z innymi modyfikacjami ingerującymi w odpowiednie skrypty shaderów. Istnieje niewielka szansa, że modyfikacja ta nie będzie działała prawidłowo, jeśli inne modyfikacje dokonały niekompatybilnych zmian w plikach skryptów. W takim przypadku, zainstaluj tę modyfikację jako pierwszą.
 
-Ręczna modyfikacja shaderów może spowodować wystąpienie błędów, które spowodują, że gra stanie się niegrywalna. 
+Ręczna korekta ustawień shaderów może spowodować wystąpienie błędów, które spowodują, że gra stanie się niegrywalna. 
 Jeżeli po uruchomieniu gry ujrzysz czarny ekran lub zniekształcone piksele, wciśnij Alt+F4 lub odpowiadający tej kombinacji skrót w przypadku systemu OS, aby wyjść z gry i naprawić błąd. 
-Jeżeli nie będziesz w stanie ręcznie naprawić plików, możesz w dowolnej chwili przeinstalować mod. 
+Jeżeli nie będziesz w stanie ręcznie naprawić plików, możesz w dowolnej chwili przeinstalować modyfikację. 
 
 
 Jak modyfikować wartości oświetlenia po instalacji? 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Jeśli zechcesz zmienić któreś z ustawień już po zainstalowaniu tego moda, odpowiednie pliki (patrz niżej) znajdziesz w folderze override.
+Jeśli zechcesz zmienić któreś z ustawień już po zainstalowaniu tej modyfikacji, odpowiednie pliki (patrz niżej) znajdziesz w folderze override.
 
-Pliki shaderów to zwykłe pliki tekstowe. Aby dostosować do swoich potrzeb poziom jasności, kontrastu lub korekcji gamma otwórz odpowiednie pliki w dowolnym edytorze tekstowym (np. Notepadzie) i zmodyfikuj zmienne oznaczone jako "jasność", "kontrast" i "gamma", znajdujące się w górnej części każdego skryptu. Każdy z plików shaderów zawiera krótki komentarz wyjaśniający jak ustawić odpowiednie wartości. W celu uzyskania najlepszych rezultatów zmienne we wszystkich trzech plikach shaderów powinny mieć tę samą wartość.
+Pliki shaderów to zwykłe pliki tekstowe. Aby dostosować do swoich potrzeb poziom jaskrawości, kontrastu lub korekcji gamma otwórz odpowiednie pliki w dowolnym edytorze tekstowym (np. Notepadzie) i zmodyfikuj zmienne oznaczone jako „jaskrawość”, „kontrast” i „gamma”, znajdujące się w górnej części każdego skryptu. Każdy z plików shaderów zawiera krótki komentarz wyjaśniający jak ustawić odpowiednie wartości. W celu uzyskania najlepszych rezultatów zmienne we wszystkich trzech plikach shaderów powinny mieć tę samą wartość.
 
 Zastosowanie plików shaderów w grze:
 fpDraw.GLSL   Wykorzystywany we wszystkich kolorowych obszarach ekranu, z wyjątkiem filmów. 

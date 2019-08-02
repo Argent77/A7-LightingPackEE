@@ -1,12 +1,16 @@
 @1 = ~Pliki skryptowe shaderow dla kontroli oswietlenia~
+@2 = ~Modyfikacja temperatury barwowej~
+@3 = ~Ustawienia zaawansowane: modyfikowanie barwy/nasycenia/jasnosci~
 
-@100 = ~Neutralne ustawienia poziomu kontrastu, jasnosci i korekcji gamma~
+@10 = ~Ustawienia zaawansowane~
 
-@101 = ~Nieznacznie zwiekszone poziomy kontrastu, jasnosci i korekcji gamma~
-@102 = ~Srednio zwiekszone poziomy kontrasu, jasnosci i korekcji gamma (zalecane)~
-@103 = ~Znacznie zwiekszone poziomy kontrastu, jasnosci i korekcji gamma~
-@104 = ~Nieznacznie zmniejszone poziomy kontrastu, jasnosci i korekcji gamma~
-@105 = ~Srednio zmniejszone poziomy kontrastu, jasnosci i korekcji gamma~
+@100 = ~Neutralne ustawienia poziomu kontrastu, jaskrawosci i korekcji gamma~
+
+@101 = ~Nieznacznie zwiekszone poziomy kontrastu, jaskrawosci i korekcji gamma~
+@102 = ~Srednio zwiekszone poziomy kontrasu, jaskrawosci i korekcji gamma (zalecane)~
+@103 = ~Znacznie zwiekszone poziomy kontrastu, jaskrawosci i korekcji gamma~
+@104 = ~Nieznacznie zmniejszone poziomy kontrastu, jaskrawosci i korekcji gamma~
+@105 = ~Srednio zmniejszone poziomy kontrastu, jaskrawosci i korekcji gamma~
 
 @106 = ~Nieznacznie zwiekszony poziom kontrastu~
 @107 = ~Srednio zwiekszony poziom kontrastu~
@@ -14,11 +18,11 @@
 @109 = ~Nieznacznie zmniejszony poziom kontrastu~
 @110 = ~Srednio zmniejszony poziom kontrastu~
 
-@111 = ~Nieznacznie zwiekszony poziom jasnosci~
-@112 = ~Srednio zwiekszony poziom jasnosci~
-@113 = ~Znacznie zwiekszony poziom jasnosci~
-@114 = ~Nieznacznie zmniejszony poziom jasnosci~
-@115 = ~Srednio zmniejszony poziom jasnosci~
+@111 = ~Nieznacznie zwiekszony poziom jaskrawosci~
+@112 = ~Srednio zwiekszony poziom jaskrawosci~
+@113 = ~Znacznie zwiekszony poziom jaskrawoscii~
+@114 = ~Nieznacznie zmniejszony poziom jaskrawosci~
+@115 = ~Srednio zmniejszony poziom jaskrawosci~
 
 @116 = ~Nieznacznie zwiekszony poziom korekcji gamma~
 @117 = ~Srednio zwiekszony poziom korekcji gamma~
@@ -29,15 +33,52 @@
 @121 = ~Wprowadz recznie wartosci oswietlenia~
 
 @200 = ~Wprowadz wartosc poziomu kontrastu (liczba >= 0.0, neutralna=1.0):~
-@201 = ~Wprowadz wartosc poziomu jasnosci (liczba z przedzialu [-1.0, 1.0], neutralna=0.0):~
+@201 = ~Wprowadz wartosc poziomu jaskrawosci (liczba z przedzialu [-1.0, 1.0], neutralna=0.0):~
 @202 = ~Wprowadz wartosc poziomu korekcji gamma (liczba > 0.0, neutralna=1.0):~
 @203 = ~Wprowadzono nastepujace wartosci:~
 @204 = ~Kontrast   = %contrast%~
-@205 = ~Jasnosc    = %brightness%~
+@205 = ~Jaskrawosc = %brightness%~
 @206 = ~Gamma      = %gamma%~
 
 @207 = ~Czy podane wartosci sa prawidlowe [y/n/c]?~
 @208 = ~Czy podane wartosci sa prawidlowe? (Wcisnij y dla tak, n dla nie, lub c aby przerwac):~
+@209 = ~Czy podana wartosc jest prawidlowa [y/n/c]?~
+@210 = ~Czy podana wartosc jest prawidlowa? (Wcisnij y dla tak, n dla nie, lub c aby przerwac):~
+@211 = ~Wprowadzono nastepujaca wartosc:~
+@212 = ~Uzyto wartosci "neutralna".~
+
+@300 = ~Zastosowano ustawienia wstepne "Arktyczny blekit" (15,000 kelwinow)~
+@301 = ~Zastosowano ustawienia wstepne "Pochmurne niebo" (7,500 kelwinow)~
+@302 = ~Zastosowano ustawienia wstepne "Swiatlo dzienne (neutralna)" (6,500 kelwinow)~
+@303 = ~Zastosowano ustawienia wstepne "Swiatlo sloneczne" (5,500 kelwinow)~
+@304 = ~Zastosowano ustawienia wstepne "Swiatlo ksiezyca" (4,200 kelwinow)~
+@305 = ~Zastosowano ustawienia wstepne "Zachod slonca" (3,500 kelwinow)~
+@306 = ~Zastosowano ustawienia wstepne "Zarowka" (2,800 kelwinow)~
+@307 = ~Zastosowano ustawienia wstepne "Swieca" (1,900 kelwinow)~
+@308 = ~Wprowadz recznie wartosci temperatury barwowej~
+@350 = ~Wprowadz wartosc temperatury barwowej (liczba z przedzialu [1000, 40000], neutralna=6500, wylaczona=0):~
+@351 = ~Temperatura = %kelvin% kelwinow~
+@352 = ~Przyklady:
+Arktyczny blekit:  15000
+Pochmurne niebo:   7500
+Swiatlo dzienne:   6500 (neutralna)
+Swiatlo sloneczne: 5500
+Swiatlo ksiezyca:  4200
+Zachod slonca:     3500
+Zarowka:           2800
+Swieca:            1900~
+
+@400 = ~Wprowadz recznie wartosc odpowiadajaca danej barwie~
+@401 = ~Wprowadz recznie wartosc poziomu nasycenia~
+@402 = ~Wprowadz recznie wartosc poziomu jasnosci~
+@403 = ~Wprowadz wartosci odpowiadajaca danej barwie, poziomowi nasycenia i jasnosci~
+
+@410 = ~Wprowadz wartosc odpowiadajaca danej barwie (liczba z przedzialu [-1.0, 1.0], neutralna=0.0):~
+@411 = ~Wprowadz wartosc poziomu nasycenia (liczba >= 0.0, neutralna=1.0):~
+@412 = ~Wprowadz wartosc poziomu jasnosci (liczba >= 0.0, neutralna=1.0):~
+@413 = ~Barwa     = %hue%~
+@414 = ~Nasycenie = %saturation%~
+@415 = ~Jasnosc   = %lightness%~
 
 @1000 = ~Modyfikacja ta wymaga zainstalowania wersji Enhanced Edition.~
 @1001 = ~Do dzialania tego moda niezbedne jest zainstalowanie BG:EE w wersji 1.2 lub wyzszej.~
