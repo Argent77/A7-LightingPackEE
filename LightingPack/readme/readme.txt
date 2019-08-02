@@ -73,9 +73,9 @@ If you want to change one or more settings after the mod has been installed, you
 the respective files (see below) in the override folder of your game installation.
 
 Shader files are simple text files. To adjust the brightness, contrast and gamma correction
-values to your needs, open the respective file in your text editor (e.g. Notepad) and modify
-the variables labeled as 'brightness', 'contrast' and 'gamma' located in the upper section of
-each script. The shader files contain short comments on how to set the values correctly.
+values to your needs, open the respective file in your text editor (e.g. Notepad or Notepad++)
+and modify the variables labeled as 'brightness', 'contrast' and 'gamma' located in the upper
+section of each script. The shader files contain short comments on how to set the values correctly.
 You should set the variables in all three shader files to the same amount for best results.
 
 The same applies to color temperature as well as the advanced settings of hue, saturation and
