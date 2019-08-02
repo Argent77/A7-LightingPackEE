@@ -1,6 +1,6 @@
 @1 = ~Shaderskripte fuer Helligkeitseinstellungen~
 @2 = ~Farbtemperatur aendern~
-@3 = ~Erweiterte Einstellungen: Farbton/Saettigung/Lichtstaerke aendern~
+@3 = ~Erweiterte Einstellungen: Farbwert/Saettigung/Hellwert aendern~
 
 @10 = ~Erweiterte Einstellungen~
 
@@ -68,17 +68,17 @@ Sonnenuntergang:  3500
 Gluehlampe:       2800
 Kerzenlicht:      1900~
 
-@400 = ~Farbton manuell eingeben~
+@400 = ~Farbwert manuell eingeben~
 @401 = ~Saettigung manuell eingeben~
-@402 = ~Lichtstaerke manuell eingeben~
-@403 = ~Werte fuer Farbton, Saettigung, Lichtstaerke manuell eingeben~
+@402 = ~Hellwert manuell eingeben~
+@403 = ~Werte fuer Farbwert, Saettigung, Hellwert manuell eingeben~
 
-@410 = ~Wert fuer Farbton (im Bereich [-1.0, 1.0], neutral=0.0):~
+@410 = ~Wert fuer Farbwert (im Bereich [-1.0, 1.0], neutral=0.0):~
 @411 = ~Wert fuer Saettigung (Zahl >= 0.0, neutral=1.0):~
-@412 = ~Wert fuer Lichtstaerke (Zahl >= 0.0, neutral=1.0):~
-@413 = ~Farbton      = %hue%~
-@414 = ~Saettigung   = %saturation%~
-@415 = ~Lichtstaerke = %lightness%~
+@412 = ~Wert fuer Hellwert (Zahl >= 0.0, neutral=1.0):~
+@413 = ~Farbwert    = %hue%~
+@414 = ~Saettigung  = %saturation%~
+@415 = ~Hellwert    = %lightness%~
 
 @1000 = ~Diese Mod benoetigt die Enhanced Editions.~
 @1001 = ~Diese Mod benoetigt BG:EE v1.2 oder hoeher.~

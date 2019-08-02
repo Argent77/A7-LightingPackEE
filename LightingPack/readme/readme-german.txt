@@ -22,7 +22,7 @@ manuell festlegen.
 Eine Übersicht über die gängigsten Voreinstellungen von Helligkeit, Kontrast und Gamma kann man in der Grafikdatei
 "lighting_preview.jpg" betrachten, die sich im "preview"-Ordner dieser Mod befindet.
 
-Seit Version 3.0 der Mod kann man zusätzlich sowohl Farbtemperatur als auch Farbton, Sättigung und Lichtstärke
+Seit Version 3.0 der Mod kann man zusätzlich sowohl Farbtemperatur als auch Farbwert, Sättigung und Hellwert
 einstellen. Die letzteren Optionen sind eher in Spezialfällen sinnvoll, daher sind sie unter der Gruppe
 "Erweiterte Einstellungen" zu finden.
 
@@ -76,8 +76,8 @@ Syntaxhervorhebung eine erweiterten Texteditors, wie z.B. Notepad++ bei der Fehl
 versehen, der den Wertebereich und Neutralwert der jeweiligen Option angibt. Ihr solltet in allen Shaderdateien 
 die selben Werte verwenden.
 
-Genauso kann mit den Werten für Farbtemperatur oder den erweiterten Einstellungen Farbton, Sättigung und Lichtstärke 
-verfahren.
+Genauso kann mit den Werten für Farbtemperatur (kelvin) oder den erweiterten Einstellungen Farbwert (hue),
+Sättigung (saturation) und Hellwert (lightness) verfahren.
 
 Shaderdateien und ihre Verwendung im Spiel:
 fpDraw.GLSL     Für alle farbigen Gebiete auf dem Bildschirm, außer für Videos.
