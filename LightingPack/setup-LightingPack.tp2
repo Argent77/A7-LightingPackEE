@@ -8,20 +8,22 @@ ALWAYS
   OUTER_TEXT_SPRINT REG_ZERO ~^[+-]?\(0*\.\)?0+\([eE][+-]?[0-9]+\)?$~
 END
 
-README ~LightingPack/readme/readme-%LANGUAGE%.txt~
-       ~LightingPack/readme/readme.txt~
+README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.html~
+       ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.txt~
+       ~%MOD_FOLDER%/readme/readme.html~
+       ~%MOD_FOLDER%/readme/readme.txt~
 
 LANGUAGE  ~English~
           ~english~
-          ~LightingPack/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
 LANGUAGE  ~Polski (tlumaczenie: Cahir)~
           ~polish~
-          ~LightingPack/languages/english/setup.tra~
-          ~LightingPack/languages/polish/setup.tra~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/polish/setup.tra~
 LANGUAGE  ~Deutsch~
           ~german~
-          ~LightingPack/languages/english/setup.tra~
-          ~LightingPack/languages/german/setup.tra~
+          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~%MOD_FOLDER%/languages/german/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 ///// Shader script files for lighting control                   \\\\\
@@ -29,217 +31,217 @@ LANGUAGE  ~Deutsch~
 
 // Neutral settings
 BEGIN @100    // Neutral settings for contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 0
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.0" END
 
 // slight overall increase
 BEGIN @101    // Slightly increased contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 1
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.1" brightness = "0.05" gamma = "1.05" END
 
 // moderate overall increase
 BEGIN @102    // Moderately increased contrast, brightness and gamma (recommended)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 2
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.2" brightness = "0.1" gamma = "1.1" END
 
 // great overall increase
 BEGIN @103    // Greatly increased contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 3
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.4" brightness = "0.2" gamma = "1.2" END
 
 // slight overall decrease
 BEGIN @104    // Slightly reduced contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 4
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.9" brightness = "-0.05" gamma = "1.0" END
 
 // moderate overall decrease
 BEGIN @105    // Moderately reduced contrast, brightness and gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 5
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.8" brightness = "-0.1" gamma = "0.9" END
 
 // slight contrast increase
 BEGIN @106    // Slightly increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 6
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.05" brightness = "0.0" gamma = "1.0" END
 
 // moderate contrast increase
 BEGIN @107    // Moderately increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 7
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.1" brightness = "0.0" gamma = "1.0" END
 
 // great contrast increase
 BEGIN @108    // Greatly increased contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 8
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.2" brightness = "0.0" gamma = "1.0" END
 
 // slight contrast decrease
 BEGIN @109    // Slightly reduced contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 9
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.9" brightness = "0.0" gamma = "1.0" END
 
 // moderate contrast decrease
 BEGIN @110    // Moderately reduced contrast
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 10
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.8" brightness = "0.0" gamma = "1.0" END
 
 // slight brightness increase
 BEGIN @111    // Slightly increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 11
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.05" gamma = "1.0" END
 
 // moderate brightness increase
 BEGIN @112    // Moderately increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 12
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.1" gamma = "1.0" END
 
 // great brightness increase
 BEGIN @113    // Greatly increased brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 13
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.2" gamma = "1.0" END
 
 // slight brightness decrease
 BEGIN @114    // Slightly reduced brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 14
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "-0.05" gamma = "1.0" END
 
 // moderate brightness decrease
 BEGIN @115    // Moderately reduced brightness
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 15
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "-0.1" gamma = "1.0" END
 
 // slight gamma increase
 BEGIN @116    // Slightly increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 16
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.1" END
 
 // moderate gamma increase
 BEGIN @117    // Moderately increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 17
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.2" END
 
 // great gamma increase
 BEGIN @118    // Greatly increased gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 18
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.4" END
 
 // slight gamma decrease
 BEGIN @119    // Slightly reduced gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 19
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.9" END
 
 // moderate gamma decrease
 BEGIN @120    // Moderately reduced gamma
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 20
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.8" END
 
 // manual input
 BEGIN @121    // Enter values for contrast, brightness and gamma manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 21
@@ -292,7 +294,7 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = EVAL ~%contrast%~ brightness = EVAL ~%brightness%~ gamma = EVAL ~%gamma%~ END
 
 
@@ -301,80 +303,80 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 
 BEGIN @300    // Apply preset "Arctic blue" (15,000 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 100
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "15000" END
 
 BEGIN @301    // Apply preset "Overcast sky" (7,500 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 101
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "7500" END
 
 BEGIN @302    // Apply preset "Daylight (neutral)" (6,500 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 102
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "6500" END
 
 BEGIN @303    // Apply preset "Sunlight" (5,500 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 103
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "5500" END
 
 BEGIN @304    // Apply preset "Moonlight" (4,200 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 104
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "4200" END
 
 BEGIN @305    // Apply preset "Sunset" (3,500 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 105
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "3500" END
 
 BEGIN @306    // Apply preset "Lightbulb" (2,800 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 106
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "2800" END
 
 BEGIN @307    // Apply preset "Candlelight" (1900 Kelvin)
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 107
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "1900" END
 
 // Manual input: color temperature only
 BEGIN @308    // Enter value for color temperature manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 108
@@ -408,7 +410,7 @@ BEGIN @308    // Enter value for color temperature manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = EVAL ~%kelvin%~ END
 
 
@@ -418,7 +420,7 @@ BEGIN @308    // Enter value for color temperature manually
 
 // Manual input: hue only
 BEGIN @400    // Enter value for hue manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
@@ -427,17 +429,17 @@ BEGIN @400    // Enter value for hue manually
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
     // input hue
-    PRINT @410  // Enter a value for hue (any number, neutral=0.0):
+    PRINT @410  // Enter a value for hue (interval [-1.0, 1.0], neutral=0.0):
     ACTION_READLN hue
     ACTION_IF (~%hue%~ STR_EQ ~~) BEGIN PRINT @212 OUTER_TEXT_SPRINT hue ~0.0~ END
     OUTER_WHILE (~%hue%~ STRING_MATCHES_REGEXP ~%REG_FLOAT%~) BEGIN
-      PRINT @410  // Enter a value for hue (any number, neutral=0.0):
+      PRINT @410  // Enter a value for hue (interval [-1.0, 1.0], neutral=0.0):
       ACTION_READLN hue
     END
 
     // print summary
     PRINT @211    // The following value has been entered:
-    PRINT @413    // Hue        =
+    PRINT @413    // Hue         = %hue%
 
     PRINT @209    // Is the value correct [y/n/c]?
     ACTION_READLN confirm
@@ -452,12 +454,12 @@ BEGIN @400    // Enter value for hue manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_HSL STR_VAR hue = EVAL ~%hue%~ END
 
 // Manual input: saturation only
 BEGIN @401    // Enter value for saturation manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
@@ -476,7 +478,7 @@ BEGIN @401    // Enter value for saturation manually
 
     // print summary
     PRINT @211    // The following value has been entered:
-    PRINT @414    // Saturation =
+    PRINT @414    // Saturation  = %saturation%
 
     PRINT @209    // Is the value correct [y/n/c]?
     ACTION_READLN confirm
@@ -491,12 +493,12 @@ BEGIN @401    // Enter value for saturation manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_HSL STR_VAR saturation = EVAL ~%saturation%~ END
 
 // Manual input: lightness only
 BEGIN @402    // Enter value for lightness manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
@@ -515,7 +517,7 @@ BEGIN @402    // Enter value for lightness manually
 
     // print summary
     PRINT @211    // The following value has been entered:
-    PRINT @415    // Lightness  =
+    PRINT @415    // Lightness   = %lightness%
 
     PRINT @209    // Is the value correct [y/n/c]?
     ACTION_READLN confirm
@@ -530,12 +532,12 @@ BEGIN @402    // Enter value for lightness manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_HSL STR_VAR lightness = EVAL ~%lightness%~ END
 
 // Manual input: hue, saturation, lightness
 BEGIN @403    // Enter values for hue, saturation, lightness manually
-  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee~ @1000  // This mod requires an Enhanced Edition game to be installed.
+  REQUIRE_PREDICATE GAME_IS ~bgee bg2ee eet iwdee pstee~ @1000  // This mod requires an Enhanced Edition game to be installed.
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
@@ -544,7 +546,7 @@ BEGIN @403    // Enter values for hue, saturation, lightness manually
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
     // input hue
-    PRINT @410  // Enter a value for hue (any number, neutral=0.0):
+    PRINT @410  // Enter a value for hue (interval [-1.0, 1.0], neutral=0.0):
     ACTION_READLN hue
     ACTION_IF (~%hue%~ STR_EQ ~~) BEGIN PRINT @212 OUTER_TEXT_SPRINT hue ~0.0~ END
     OUTER_WHILE (~%hue%~ STRING_MATCHES_REGEXP ~%REG_FLOAT%~) BEGIN
@@ -572,9 +574,9 @@ BEGIN @403    // Enter values for hue, saturation, lightness manually
 
     // print summary
     PRINT @203    // The following values have been entered:
-    PRINT @413    // Hue         =
-    PRINT @414    // Saturation  =
-    PRINT @415    // Lightness   =
+    PRINT @413    // Hue         = %hue%
+    PRINT @414    // Saturation  = %saturation%
+    PRINT @415    // Lightness   = %lightness%
 
     PRINT @207    // Are the values correct [y/n/c]?
     ACTION_READLN confirm
@@ -589,5 +591,5 @@ BEGIN @403    // Enter values for hue, saturation, lightness manually
     END
   END
 
-  INCLUDE ~LightingPack/lib/functions.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_HSL STR_VAR hue = EVAL ~%hue%~ saturation = EVAL ~%saturation%~ lightness = EVAL ~%lightness%~ END
