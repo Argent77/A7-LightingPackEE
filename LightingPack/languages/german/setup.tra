@@ -20,13 +20,13 @@
 
 @111 = ~Leicht erhoehte Helligkeit~
 @112 = ~Maessig erhoehte Helligkeit~
-@113 = ~Start erhoehte Helligkeit~
-@114 = ~leicht verminderte Helligkeit~
+@113 = ~Stark erhoehte Helligkeit~
+@114 = ~Leicht verminderte Helligkeit~
 @115 = ~Maessig verminderte Helligkeit~
 
 @116 = ~Leicht erhoehter Gammawert~
 @117 = ~Maessig erhoehter Gammawert~
-@118 = ~Start erhoehter Gammawert~
+@118 = ~Stark erhoehter Gammawert~
 @119 = ~Leicht verminderter Gammawert~
 @120 = ~Maessig verminderter Gammawert~
 
