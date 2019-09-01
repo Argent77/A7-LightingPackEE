@@ -2,6 +2,8 @@
 
 **Author:** Argent77
 
+**Website:** https://argent77.github.io/A7-LightingPackEE/index.html
+
 **Discussion:** [Spellhold Studios Forums](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/) or [Beamdog Forums](https://forums.beamdog.com/discussion/36828/mod-lighting-pack-for-the-enhanced-edition)
 
 
