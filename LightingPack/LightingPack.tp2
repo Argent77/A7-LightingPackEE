@@ -15,15 +15,15 @@ README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.html~
 
 LANGUAGE  ~English~
           ~english~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
+          ~LightingPack/languages/english/setup.tra~
 LANGUAGE  ~Polski (tlumaczenie: Cahir)~
           ~polish~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/polish/setup.tra~
+          ~LightingPack/languages/english/setup.tra~
+          ~LightingPack/languages/polish/setup.tra~
 LANGUAGE  ~Deutsch~
           ~german~
-          ~%MOD_FOLDER%/languages/english/setup.tra~
-          ~%MOD_FOLDER%/languages/german/setup.tra~
+          ~LightingPack/languages/english/setup.tra~
+          ~LightingPack/languages/german/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 ///// Shader script files for lighting control                   \\\\\
