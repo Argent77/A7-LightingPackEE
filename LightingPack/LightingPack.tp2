@@ -1,17 +1,22 @@
-BACKUP ~LightingPack/backup~
+BACKUP ~weidu_external/backup/LightingPack~
 SUPPORT ~http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/~
 VERSION ~v3.1~
 
 ALWAYS
+  // required because of non-standard BACKUP path
+  OUTER_TEXT_SPRINT MOD_FOLDER ~LightingPack~
+  // root folder for mutable data
+  OUTER_TEXT_SPRINT WORK_FOLDER ~weidu_external~
+
   OUTER_TEXT_SPRINT REG_FLOAT ~^[+-]?\([0-9]*\.\)?[0-9]+\([eE][+-]?[0-9]+\)?$~
   OUTER_TEXT_SPRINT REG_FLOAT_POS ~^+?\([0-9]*\.\)?[0-9]+\([eE][+-]?[0-9]+\)?$~
   OUTER_TEXT_SPRINT REG_ZERO ~^[+-]?\(0*\.\)?0+\([eE][+-]?[0-9]+\)?$~
 END
 
-README ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.html~
-       ~%MOD_FOLDER%/readme/readme-%LANGUAGE%.txt~
-       ~%MOD_FOLDER%/readme/readme.html~
-       ~%MOD_FOLDER%/readme/readme.txt~
+README ~LightingPack/readme/readme-%LANGUAGE%.html~
+       ~LightingPack/readme/readme-%LANGUAGE%.txt~
+       ~LightingPack/readme/readme.html~
+       ~LightingPack/readme/readme.txt~
 
 LANGUAGE  ~English~
           ~english~
