@@ -1,11 +1,15 @@
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/A7-LightingPackEE?color=darkred&include_prereleases&label=latest%20release)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
+[![GitHub release date (latest by date)](https://img.shields.io/github/release-date/Argent77/A7-LightingPackEE?color=gold)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/A7-LightingPackEE/total.svg?color=blueviolet)](https://GitHub.com/Argent77/A7-LightingPackEE/releases)
+[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20German%20%7C%20Polish&color=limegreen)]()
+
 # Shader Pack: Lighting adjustments for the Enhanced Edition
 
-**Author:** Argent77
+[![Website](https://img.shields.io/static/v1?label=Website&message=Shader%20Pack&color=ccc7ba&labelColor=eee&style=flat)](https://argent77.github.io/A7-LightingPackEE/index.html)
 
-**Website:** https://argent77.github.io/A7-LightingPackEE/index.html
-
-**Discussion:** [Spellhold Studios Forums](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/) or [Beamdog Forums](https://forums.beamdog.com/discussion/36828/mod-lighting-pack-for-the-enhanced-edition)
-
+[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=flat)](https://forums.beamdog.com/discussion/36828)
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=flat)](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/)
 
 ## Introduction
 
@@ -15,7 +19,7 @@ This mod provides a way to bring back the means to adjust brightness, contrast a
 
 Since version 3.0 of the mod you can also adjust color temperature as well as hue, saturation and lightness. The latter set of options have been marked as "Advanced Settings" as they are useful only in specific cases.
 
-To get a general idea of how each setting looks like compared to the original, visit either topic on [Spellhold Studios Forums](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/) or [Beamdog Forums](https://forums.beamdog.com/discussion/36828/mod-lighting-pack-for-the-enhanced-edition).
+To get a general idea of how each setting looks like compared to the original, open the [Readme](https://argent77.github.io/A7-LightingPackEE/index.html) or visit either topic on [Spellhold Studios Forums](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/) or [Beamdog Forums](https://forums.beamdog.com/discussion/36828).
 
 **Note:** Changes made by this mod will not be visible if you select "Alternative renderer" in the graphics options of the games.
 
