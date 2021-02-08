@@ -1,15 +1,16 @@
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/A7-LightingPackEE?color=darkred&include_prereleases&label=latest%20release)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
-[![GitHub release date (latest by date)](https://img.shields.io/github/release-date/Argent77/A7-LightingPackEE?color=gold)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
-[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/A7-LightingPackEE/total.svg?color=blueviolet)](https://GitHub.com/Argent77/A7-LightingPackEE/releases)
-[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://GitHub.com/Argent77/A7-LightingPackEE/releases/latest)
-[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20German%20%7C%20Polish&color=limegreen)]()
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/Argent77/A7-LightingPackEE?color=darkred&include_prereleases&label=latest%20release)](https://github.com/Argent77/A7-LightingPackEE/releases/latest)
+[![Github downloads (all releases)](https://img.shields.io/github/downloads/Argent77/A7-LightingPackEE/total.svg?color=gold)](https://github.com/Argent77/A7-LightingPackEE/releases)
+[![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BG%3AEE%20%7C%20SoD%20%7C%20BG2%3AEE%20%7C%20EET%20%7C%20IWD%3AEE%20%7C%20PST%3AEE&color=indigo)](https://github.com/Argent77/A7-LightingPackEE)
+[![Platform](https://img.shields.io/static/v1?label=platform&message=Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Project%20Infinity&color=informational)](https://github.com/Argent77/A7-LightingPackEE/releases/latest)
+[![Language](https://img.shields.io/static/v1?label=language&message=English%20%7C%20German%20%7C%20Polish&color=limegreen)](https://github.com/Argent77/A7-LightingPackEE)
 
 # Shader Pack: Lighting adjustments for the Enhanced Edition
 
-[![Website](https://img.shields.io/static/v1?label=Website&message=Shader%20Pack&color=ccc7ba&labelColor=eee&style=flat)](https://argent77.github.io/A7-LightingPackEE/index.html)
+[![Website](https://img.shields.io/static/v1?label=Website&message=Shader%20Pack&color=ccc7ba&labelColor=eee&style=for-the-badge)](https://argent77.github.io/A7-LightingPackEE/index.html "View Readme")
 
-[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=flat)](https://forums.beamdog.com/discussion/36828)
-[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=flat)](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/)
+[![Beamdog Forums](https://img.shields.io/static/v1?label=Discussion&message=Beamdog%20Forums&color=444&labelColor=eee&style=for-the-badge)](https://forums.beamdog.com/discussion/36828 "Beamdog Forums")
+&nbsp;&nbsp;
+[![SHS Forums](https://img.shields.io/static/v1?label=Discussion&message=SHS%20Forums&color=951514&labelColor=eee&style=for-the-badge)](http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/ "Spellhold Studios Forums")
 
 ## Introduction
 
