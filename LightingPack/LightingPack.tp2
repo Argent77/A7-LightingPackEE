@@ -40,6 +40,7 @@ BEGIN @100    // Neutral settings for contrast, brightness and gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 0
+  LABEL ~A7-LIGHTINGPACK-CBG_NEUTRAL~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.0" END
@@ -50,6 +51,7 @@ BEGIN @101    // Slightly increased contrast, brightness and gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 1
+  LABEL ~A7-LIGHTINGPACK-CBG_SIGHT_INCREASE~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.1" brightness = "0.05" gamma = "1.05" END
@@ -60,6 +62,7 @@ BEGIN @102    // Moderately increased contrast, brightness and gamma (recommende
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 2
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_INCREASE~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.2" brightness = "0.1" gamma = "1.1" END
@@ -70,6 +73,7 @@ BEGIN @103    // Greatly increased contrast, brightness and gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 3
+  LABEL ~A7-LIGHTINGPACK-CBG_GREAT_INCREASE~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.4" brightness = "0.2" gamma = "1.2" END
@@ -80,6 +84,7 @@ BEGIN @104    // Slightly reduced contrast, brightness and gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 4
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_DECREASE~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.9" brightness = "-0.05" gamma = "1.0" END
@@ -90,6 +95,7 @@ BEGIN @105    // Moderately reduced contrast, brightness and gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 5
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_DECREASE~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.8" brightness = "-0.1" gamma = "0.9" END
@@ -100,6 +106,7 @@ BEGIN @106    // Slightly increased contrast
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 6
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_INCREASE_CONTRAST~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.05" brightness = "0.0" gamma = "1.0" END
@@ -110,6 +117,7 @@ BEGIN @107    // Moderately increased contrast
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 7
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_INCREASE_CONTRAST~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.1" brightness = "0.0" gamma = "1.0" END
@@ -120,6 +128,7 @@ BEGIN @108    // Greatly increased contrast
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 8
+  LABEL ~A7-LIGHTINGPACK-CBG_GREAT_INCREASE_CONTRAST~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.2" brightness = "0.0" gamma = "1.0" END
@@ -130,6 +139,7 @@ BEGIN @109    // Slightly reduced contrast
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 9
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_DECREASE_CONTRAST~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.9" brightness = "0.0" gamma = "1.0" END
@@ -140,6 +150,7 @@ BEGIN @110    // Moderately reduced contrast
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 10
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_DECREASE_CONTRAST~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "0.8" brightness = "0.0" gamma = "1.0" END
@@ -150,6 +161,7 @@ BEGIN @111    // Slightly increased brightness
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 11
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_INCREASE_BRIGHTNESS~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.05" gamma = "1.0" END
@@ -160,6 +172,7 @@ BEGIN @112    // Moderately increased brightness
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 12
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_INCREASE_BRIGHTNESS~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.1" gamma = "1.0" END
@@ -170,6 +183,7 @@ BEGIN @113    // Greatly increased brightness
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 13
+  LABEL ~A7-LIGHTINGPACK-CBG_GREAT_INCREASE_BRIGHTNESS~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.2" gamma = "1.0" END
@@ -180,6 +194,7 @@ BEGIN @114    // Slightly reduced brightness
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 14
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_DECREASE_BRIGHTNESS~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "-0.05" gamma = "1.0" END
@@ -190,6 +205,7 @@ BEGIN @115    // Moderately reduced brightness
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 15
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_DECREASE_BRIGHTNESS~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "-0.1" gamma = "1.0" END
@@ -200,6 +216,7 @@ BEGIN @116    // Slightly increased gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 16
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_INCREASE_GAMMA~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.1" END
@@ -210,6 +227,7 @@ BEGIN @117    // Moderately increased gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 17
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_INCREASE_GAMMA~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.2" END
@@ -220,6 +238,7 @@ BEGIN @118    // Greatly increased gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 18
+  LABEL ~A7-LIGHTINGPACK-CBG_GREAT_INCREASE_GAMMA~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "1.4" END
@@ -230,6 +249,7 @@ BEGIN @119    // Slightly reduced gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 19
+  LABEL ~A7-LIGHTINGPACK-CBG_SLIGHT_DECREASE_GAMMA~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.9" END
@@ -240,6 +260,7 @@ BEGIN @120    // Moderately reduced gamma
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 20
+  LABEL ~A7-LIGHTINGPACK-CBG_MODERATE_DECREASE_GAMMA~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_CBG STR_VAR contrast = "1.0" brightness = "0.0" gamma = "0.8" END
@@ -250,6 +271,7 @@ BEGIN @121    // Enter values for contrast, brightness and gamma manually
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @1   // Install shader files for lighting control (BG:EE or BG2:EE)
   DESIGNATED 21
+  LABEL ~A7-LIGHTINGPACK-CBG_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
@@ -312,6 +334,7 @@ BEGIN @300    // Apply preset "Arctic blue" (15,000 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 100
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_15000~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "15000" END
@@ -321,6 +344,7 @@ BEGIN @301    // Apply preset "Overcast sky" (7,500 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 101
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_7500~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "7500" END
@@ -330,6 +354,7 @@ BEGIN @302    // Apply preset "Daylight (neutral)" (6,500 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 102
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_6500~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "6500" END
@@ -339,6 +364,7 @@ BEGIN @303    // Apply preset "Sunlight" (5,500 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 103
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_5500~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "5500" END
@@ -348,6 +374,7 @@ BEGIN @304    // Apply preset "Moonlight" (4,200 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 104
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_4200~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "4200" END
@@ -357,6 +384,7 @@ BEGIN @305    // Apply preset "Sunset" (3,500 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 105
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_3500~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "3500" END
@@ -366,6 +394,7 @@ BEGIN @306    // Apply preset "Lightbulb" (2,800 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 106
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_2800~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "2800" END
@@ -375,6 +404,7 @@ BEGIN @307    // Apply preset "Candlelight" (1900 Kelvin)
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 107
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_1900~
 
   INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
   LAF INSTALL_TEMPERATURE STR_VAR kelvin = "1900" END
@@ -385,6 +415,7 @@ BEGIN @308    // Enter value for color temperature manually
   REQUIRE_PREDICATE FILE_EXISTS_IN_GAME ~fpDraw.GLSL~ @1001 // You need BG:EE v1.2 or higher for this mod to work.
   SUBCOMPONENT @2   // Advanced settings: Modify Color Temperature
   DESIGNATED 108
+  LABEL ~A7-LIGHTINGPACK-TEMPERATURE_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
@@ -430,6 +461,7 @@ BEGIN @400    // Enter value for hue manually
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
   DESIGNATED 200
+  LABEL ~A7-LIGHTINGPACK-HUE_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
@@ -469,6 +501,7 @@ BEGIN @401    // Enter value for saturation manually
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
   DESIGNATED 201
+  LABEL ~A7-LIGHTINGPACK-SATURATION_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
@@ -508,6 +541,7 @@ BEGIN @402    // Enter value for lightness manually
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
   DESIGNATED 202
+  LABEL ~A7-LIGHTINGPACK-LIGHTNESS_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
@@ -547,6 +581,7 @@ BEGIN @403    // Enter values for hue, saturation, lightness manually
   SUBCOMPONENT @3   // Advanced settings: Modify Hue/Saturation/Lightness
   GROUP @10 // Advanced settings
   DESIGNATED 203
+  LABEL ~A7-LIGHTINGPACK-HSL_MANUAL~
 
   OUTER_TEXT_SPRINT confirm "n"
   OUTER_WHILE (~%confirm%~ STRING_EQUAL_CASE ~n~) || (~%confirm%~ STRING_EQUAL_CASE ~no~) BEGIN
