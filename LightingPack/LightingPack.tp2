@@ -1,6 +1,6 @@
 BACKUP ~weidu_external/backup/LightingPack~
 SUPPORT ~http://www.shsforums.net/topic/57097-mod-lighting-pack-shader-scripts-for-the-enhanced-edition/~
-VERSION ~v3.1~
+VERSION ~v3.2~
 
 ALWAYS
   // required because of non-standard BACKUP path
