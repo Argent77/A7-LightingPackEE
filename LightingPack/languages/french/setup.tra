@@ -1,0 +1,84 @@
+@1 = ~Fichiers de script de shader pour le controle de l'eclairage~
+@2 = ~Modifier la temperature des couleurs~
+@3 = ~Parametres avances : modifier la teinte, la saturation et la luminosite~
+@10 = ~Parametres avances~
+
+@100 = ~Parametres neutres pour le contraste, la luminosite et le gamma~
+
+@101 = ~Contraste, luminosite et gamma legerement augmentes~
+@102 = ~Contraste, luminosite et gamma moderement augmentes (recommande)~
+@103 = ~Contraste, luminosite et gamma fortement augmentes~
+@104 = ~Contraste, luminosite et gamma legerement reduits~
+@105 = ~Contraste, luminosite et gamma moderement reduits~
+
+@106 = ~Contraste legerement augmente~
+@107 = ~Contraste moderement augmente~
+@108 = ~Contraste fortement augmente~
+@109 = ~Contraste legerement reduit~
+@110 = ~Contraste moderement reduit~
+
+@111 = ~Luminosite legerement augmentee~
+@112 = ~Luminosite moderement augmentee~
+@113 = ~Luminosite fortement augmentee~
+@114 = ~Luminosite legerement reduite~
+@115 = ~Luminosite moderement reduite~
+
+@116 = ~Gamma legerement augmente~
+@117 = ~Gamma moderement augmente~
+@118 = ~Gamma fortement augmente~
+@119 = ~Gamma legerement reduit~
+@120 = ~Gamma moderement reduit~
+
+@121 = ~Saisir manuellement les valeurs d'eclairage~
+
+@200 = ~Entrez une valeur pour le contraste (nombre >= 0,0, neutre = 1,0) :~
+@201 = ~Entrez une valeur pour la luminosite (nombre compris entre -1,0 et 1,0, neutre = 0,0) :~
+@202 = ~Entrez une valeur pour le gamma (nombre > 0,0, neutre = 1,0) :~
+@203 = ~Les valeurs suivantes ont ete saisies :~
+@204 = ~Contraste  = %contrast%~
+@205 = ~Luminosite = %brightness%~
+@206 = ~Gamma      = %gamma%~
+
+@207 = ~Les valeurs sont-elles correctes [o/n/c] ?~
+@208 = ~Les valeurs sont-elles correctes ? (Entrez "o" pour oui, "n" pour non ou "c" pour annuler) :~
+@209 = ~La valeur est-elle correcte [o/n/c] ?~
+@210 = ~La valeur est-elle correcte ? (Entrez "y" pour oui, "n" pour non ou "c" pour annuler) :~
+@211 = ~La valeur suivante a ete saisie :~
+@212 = ~Utilisation de la valeur "neutre".~
+
+@300 = ~Appliquer le prereglage "Bleu arctique" (15 000 kelvins)~
+@301 = ~Appliquer le prereglage "Ciel couvert" (7 500 kelvins)~
+@302 = ~Appliquer le prereglage "Lumiere du jour (neutre)" (6 500 kelvins)~
+@303 = ~Appliquer le prereglage "Lumiere du soleil" (5 500 kelvins)~
+@304 = ~Appliquer le prereglage "Clair de lune" (4 200 kelvins)~
+@305 = ~Appliquer le prereglage "Coucher de soleil" (3 500 kelvins)~
+@306 = ~Appliquer le prereglage "Ampoule" (2 800 kelvins)~
+@307 = ~Appliquer le prereglage "Lumiere de bougie" (1 900 kelvins)~
+@308 = ~Saisir manuellement une valeur pour la temperature de couleur~
+@350 = ~Saisir une valeur pour la temperature de couleur (intervalle [1 000, 40 000], neutre = 6 500, desactive = 0) :~
+@351 = ~Temperature = %kelvin% Kelvin~
+@352 = ~Exemples :
+Bleu arctique :    15 000
+Ciel couvert :      7 500
+Lumiere du jour :   6 500 (neutre)
+Lumiere du soleil : 5 500
+Clair de lune :     4 200
+Coucher de soleil : 3 500
+Ampoule :           2 800
+Bougie :            1 900~
+
+@400 = ~Saisir manuellement la valeur de la teinte~
+@401 = ~Saisir manuellement la valeur de la saturation~
+@402 = ~Saisir manuellement la valeur de la luminosite~
+@403 = ~Saisir les valeurs de la teinte, de la saturation et de la luminosite~
+
+@410 = ~Entrez une valeur pour la teinte (intervalle [-1,0 ; 1,0], neutre = 0,0) :~
+@411 = ~Entrez une valeur pour la saturation (nombre ≥ 0,0, neutre = 1,0) :~
+@412 = ~Entrez une valeur pour la luminosite (nombre ≥ 0,0, neutre = 1,0) :~
+@413 = ~Teinte      = %hue%~
+@414 = ~Saturation  = %saturation%~
+@415 = ~Luminosite  = %lightness%~
+
+@1000 = ~Ce mod necessite l'installation d'une version Enhanced Edition du jeu.~
+@1001 = ~Pour que ce mod fonctionne, vous devez disposer de BG:EE v1.2 ou d'une version ulterieure.~
+@1002 = ~Installation annulee par l'utilisateur.~

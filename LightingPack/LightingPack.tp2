@@ -27,6 +27,10 @@ LANGUAGE  ~Deutsch~
           ~german~
           ~LightingPack/languages/english/setup.tra~
           ~LightingPack/languages/german/setup.tra~
+LANGUAGE  ~Francais (Translation: Deratiseur)~
+          ~french~
+          ~LightingPack/languages/english/setup.tra~
+          ~LightingPack/languages/french/setup.tra~
 
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 ///// Shader script files for lighting control                   \\\\\
