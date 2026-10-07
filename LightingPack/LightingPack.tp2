@@ -31,7 +31,10 @@ LANGUAGE  ~Francais (Translation: Deratiseur)~
           ~french~
           ~LightingPack/languages/english/setup.tra~
           ~LightingPack/languages/french/setup.tra~
-
+LANGUAGE  ~Simplified Chinese~
+          ~schinese~
+          ~LightingPack/languages/schinese/setup.tra~
+		  
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
 ///// Shader script files for lighting control                   \\\\\
 /////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
